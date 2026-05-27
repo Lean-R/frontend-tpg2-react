@@ -69,10 +69,9 @@
 }
 
 .nav_icon {
-    font-size: 1.6em;
+    flex-shrink: 0;
     opacity: 0.6;
-    width: 20px;
-    text-align: center;
+    transition: opacity 0.25s ease;
 }
 
 .nav_link:hover .nav_icon,

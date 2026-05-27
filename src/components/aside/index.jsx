@@ -1,5 +1,6 @@
 import styles from "./Aside.module.css";
 import { NavLink } from "react-router-dom";
+import { IconHome, IconStar, IconNotebook } from "@tabler/icons-react";
 
 const Aside = () => {
   return (
@@ -17,7 +18,7 @@ const Aside = () => {
             isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
           }
         >
-          <span className={styles.nav_icon}>&#8962;</span>
+          <IconHome className={styles.nav_icon} size={18} />
           Home
         </NavLink>
 
@@ -29,7 +30,7 @@ const Aside = () => {
               isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
             }
           >
-            <span className={styles.nav_icon}>&#9733;</span>
+            <IconStar className={styles.nav_icon} size={16} />
             Dani
           </NavLink>
           <NavLink
@@ -38,7 +39,7 @@ const Aside = () => {
               isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
             }
           >
-            <span className={styles.nav_icon}>&#9733;</span>
+            <IconStar className={styles.nav_icon} size={16} />
             Lean
           </NavLink>
           <NavLink
@@ -47,7 +48,7 @@ const Aside = () => {
               isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
             }
           >
-            <span className={styles.nav_icon}>&#9733;</span>
+            <IconStar className={styles.nav_icon} size={16} />
             Naty
           </NavLink>
           <NavLink
@@ -56,7 +57,7 @@ const Aside = () => {
               isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
             }
           >
-            <span className={styles.nav_icon}>&#9733;</span>
+            <IconStar className={styles.nav_icon} size={16} />
             Luma
           </NavLink>
         </div>
@@ -67,7 +68,7 @@ const Aside = () => {
             isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
           }
         >
-          <span className={styles.nav_icon}>&#9998;</span>
+          <IconNotebook className={styles.nav_icon} size={18} />
           Bitácora
         </NavLink>
       </nav>
