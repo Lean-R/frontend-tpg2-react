@@ -19,11 +19,11 @@ const Aside = () => {
           }
         >
           <IconHome className={styles.nav_icon} size={18} />
-          Home
+          Localhost Coffe
         </NavLink>
 
         <div className={styles.nav_section}>
-          <span className={styles.nav_section_title}>Bartenders</span>
+          <span className={styles.nav_section_title}>BaristaDevs</span>
           <NavLink
             to="/ficha-dani"
             className={({ isActive }) =>
