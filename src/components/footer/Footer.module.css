@@ -1,0 +1,124 @@
+.os_footer {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-fondo-principal);
+  padding: 2em 1.5em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Space Mono", monospace;
+  color: var(--color-texto-secundario);
+  margin-top: auto;
+}
+
+.footer_left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.exit_command {
+  color: var(--color-acento-primario);
+  font-weight: 700;
+}
+
+.exit_comment {
+  color: var(--color-text-muted);
+  opacity: 0.8;
+}
+
+.footer_center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  flex: 1;
+}
+
+.footer_info {
+  color: var(--color-texto-secundario);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer_info:hover {
+  color: var(--color-acento-secundario);
+}
+
+.footer_info.version {
+  color: var(--color-acento-primario);
+  font-weight: 500;
+}
+
+.footer_divider {
+  opacity: 0.5;
+}
+
+.footer_right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.engine_tag {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-acento-secundario);
+  padding: 0.3em 0.8em;
+  border-radius: 4px;
+  font-weight: 500;
+  color: var(--color-acento-secundario);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .os_footer {
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 0.8em 1em;
+    font-size: 12px;
+  }
+
+  .footer_left {
+    flex: 1 0 100%;
+    order: 1;
+    justify-content: flex-start;
+  }
+
+  .footer_center {
+    flex: 1 0 100%;
+    order: 3;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .footer_right {
+    flex: 0 1 auto;
+    order: 2;
+    justify-content: flex-end;
+  }
+
+  .exit_comment {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .os_footer {
+    padding: 0.6em 0.8em;
+  }
+
+  .footer_center {
+    order: 3;
+  }
+
+  .footer_divider {
+    display: none;
+  }
+
+  .footer_info:not(.version) {
+    display: none;
+  }
+}

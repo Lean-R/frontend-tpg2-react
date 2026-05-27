@@ -3,7 +3,6 @@ import AppRouter from './routers/AppRouter.jsx'
 const App = () => {
   return (
     <>
-        
           <AppRouter/>
          
     </>

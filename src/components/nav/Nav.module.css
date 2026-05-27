@@ -1,0 +1,262 @@
+.os_navbar {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-fondo-principal);
+    padding: 0.5em 1.5em;
+    border-bottom: 2px solid var(--color-acento-primario);
+    font-family: "Space Mono", monospace;
+    height: 95px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 4px 0 10px var(--color-acento-primario);
+}
+
+.nav_left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav_hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_hamburger span {
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-acento-secundario);
+    transition: all 0.3s ease;
+    display: block;
+    transform-origin: center;
+}
+
+/* Girar linea superior hacia abajo */
+.nav_hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+}
+
+/* Esconder linea central */
+.nav_hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+/* Girar linea inferior hacia arriba */
+.nav_hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+}
+
+.nav_logo {
+    width: 90px;
+    height: 90px;
+}
+
+.nav_brand {
+    color: var(--color-acento-secundario);
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.nav_links {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: #888;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav_links a:hover {
+    color: var(--color-acento-secundario);
+    border-bottom: 2px solid var(--color-acento-secundario);
+    padding-bottom: 5px;
+}
+
+.nav_links li.active a {
+    color: var(--color-acento-secundario);
+    border-bottom: 2px solid var(--color-acento-secundario);
+    padding-bottom: 5px;
+}
+
+.nav_system_icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #888;
+    font-size: 0.8em;
+}
+
+.window_controls {
+    margin-left: 10px;
+    display: flex;
+    gap: 10px;
+    color: #555;
+}
+
+/* Media queries para responsive */
+@media (max-width: 1024px) {
+    .os_navbar {
+        height: auto;
+        padding: 1em 1.5em;
+    }
+
+    .nav_logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .nav_brand {
+        font-size: 0.8em;
+    }
+
+    .nav_links {
+        gap: 1.5em;
+    }
+
+    .nav_links a {
+        font-size: 0.75em;
+    }
+
+    .nav_time {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .os_navbar {
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding: 0.75em 1.5em;
+    }
+
+    .nav_hamburger {
+        display: flex;
+    }
+
+    .nav_left {
+        gap: 8px;
+    }
+
+    .nav_logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nav_brand {
+        font-size: 0.7em;
+    }
+
+    .nav_links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-fondo-principal);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav_links.active {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .nav_links li {
+        padding: 1em 1.5em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav_links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav_links a {
+        display: block;
+        font-size: 0.85em;
+        letter-spacing: 0.5px;
+        color: #888;
+        text-decoration: none;
+    }
+
+    .nav_links li.active a {
+        color: var(--color-acento-secundario);
+        border: none;
+        padding: 0;
+    }
+
+    .nav_system_icons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #888;
+        font-size: 0.8em;
+    }
+
+    .nav_time {
+        display: none;
+    }
+
+    .window_controls {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .os_navbar {
+        padding: 0.5em 1em;
+    }
+
+    .nav_left {
+        gap: 6px;
+    }
+
+    .nav_logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav_brand {
+        font-size: 0.65em;
+    }
+
+    .nav_links li {
+        padding: 0.75em 1.5em;
+    }
+
+    .nav_links a {
+        font-size: 0.8em;
+    }
+
+    .nav_system_icons {
+        font-size: 0.7em;
+        gap: 10px;
+    }
+
+    .window_controls {
+        gap: 8px;
+        margin-left: 10px;
+    }
+}

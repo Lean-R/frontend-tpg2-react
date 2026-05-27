@@ -1,8 +1,9 @@
+import Nav from "@components/nav"
 
 
 const Header = () => {
   return (
-    <div>Este es el header</div>
+    <Nav />
   )
 }
 
