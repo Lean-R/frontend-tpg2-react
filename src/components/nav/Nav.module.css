@@ -8,17 +8,15 @@
     border-bottom: 2px solid var(--color-acento-primario);
     font-family: "Space Mono", monospace;
     height: 95px;
-    position: fixed;
+    position: sticky;
     top: 0;
-    z-index: 1000;
-    width: 100%;
+    z-index: 999;
     box-shadow: 4px 0 10px var(--color-acento-primario);
 }
 
 .nav_left {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
 .nav_hamburger {
@@ -55,17 +53,6 @@
 /* Girar linea inferior hacia arriba */
 .nav_hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translateY(-10px);
-}
-
-.nav_logo {
-    width: 90px;
-    height: 90px;
-}
-
-.nav_brand {
-    color: var(--color-acento-secundario);
-    font-weight: bold;
-    font-size: 0.9em;
 }
 
 .nav_links {
@@ -118,15 +105,6 @@
         padding: 1em 1.5em;
     }
 
-    .nav_logo {
-        width: 70px;
-        height: 70px;
-    }
-
-    .nav_brand {
-        font-size: 0.8em;
-    }
-
     .nav_links {
         gap: 1.5em;
     }
@@ -150,19 +128,6 @@
 
     .nav_hamburger {
         display: flex;
-    }
-
-    .nav_left {
-        gap: 8px;
-    }
-
-    .nav_logo {
-        width: 60px;
-        height: 60px;
-    }
-
-    .nav_brand {
-        font-size: 0.7em;
     }
 
     .nav_links {
@@ -227,19 +192,6 @@
 @media (max-width: 480px) {
     .os_navbar {
         padding: 0.5em 1em;
-    }
-
-    .nav_left {
-        gap: 6px;
-    }
-
-    .nav_logo {
-        width: 50px;
-        height: 50px;
-    }
-
-    .nav_brand {
-        font-size: 0.65em;
     }
 
     .nav_links li {

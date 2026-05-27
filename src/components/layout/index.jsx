@@ -5,18 +5,16 @@ import styles from "./Layout.module.css";
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <Header />
-      <div className={styles.layout_wrapper}>
-        <div className={styles.aside_container}>
-          <Aside />
-        </div>
-        <div className={styles.main_container}>
-          <main className={styles.content}>{children}</main>
-          <Footer />
-        </div>
+    <div className={styles.layout_wrapper}>
+      <div className={styles.aside_container}>
+        <Aside />
       </div>
-    </>
+      <div className={styles.main_container}>
+        <Header />
+        <main className={styles.content}>{children}</main>
+        <Footer />
+      </div>
+    </div>
   );
 };
 

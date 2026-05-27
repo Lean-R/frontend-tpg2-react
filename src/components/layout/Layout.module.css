@@ -1,31 +1,27 @@
 .layout_wrapper {
-    padding-top: 95px; /* altura del navbar fixed */
     min-height: 100vh;
     display: flex;
-    box-sizing: border-box;
 }
 
 .aside_container {
     position: fixed;
-    top: 95px;
+    top: 0;
     left: 0;
     width: 250px;
-    height: calc(100vh - 95px);
+    height: 100vh;
     overflow-y: auto;
-    z-index: 999;
-    box-sizing: border-box;
-    padding: 10px;
+    z-index: 1000;
 }
 
 .main_container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 95px);
-    margin-left: 250px; /* ancho del aside */
-    padding: 10px;
+    min-height: 100vh;
+    margin-left: 250px;
 }
 
 .content {
     flex: 1;
+    padding: 2em;
 }

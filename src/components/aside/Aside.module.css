@@ -1,0 +1,31 @@
+.os_aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    height: 100%;
+    background: var(--color-fondo-principal);
+    border-right: 2px solid var(--color-acento-primario);
+    font-family: "Space Mono", monospace;
+    box-sizing: border-box;
+}
+
+.aside_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0.5em;
+}
+
+.aside_logo {
+    width: 60%;
+    height: auto;
+}
+
+.aside_brand {
+    color: var(--color-acento-secundario);
+    font-weight: bold;
+    font-size: 1.6em;
+    text-align: center;
+}
