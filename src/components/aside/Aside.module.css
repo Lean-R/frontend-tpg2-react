@@ -16,6 +16,9 @@
     align-items: center;
     gap: 8px;
     margin-top: 0.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
 }
 
 .aside_logo {
@@ -28,4 +31,75 @@
     font-weight: bold;
     font-size: 1.6em;
     text-align: center;
+}
+
+/* ---- Navegacion ---- */
+
+.aside_nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1.5em;
+    gap: 2px;
+}
+
+.nav_link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.6em 0.8em;
+    text-decoration: none;
+    color: #777;
+    font-size: 1.6em;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+}
+
+.nav_link:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--color-acento-secundario);
+}
+
+.nav_link.active {
+    background: rgba(var(--color-acento-secundario-rgb, 0, 200, 150), 0.08);
+    color: var(--color-acento-secundario);
+    border-left: 3px solid var(--color-acento-secundario);
+    padding-left: calc(0.8em - 3px);
+}
+
+.nav_icon {
+    font-size: 1.6em;
+    opacity: 0.6;
+    width: 20px;
+    text-align: center;
+}
+
+.nav_link:hover .nav_icon,
+.nav_link.active .nav_icon {
+    opacity: 1;
+}
+
+/* ---- Seccion Bartenders ---- */
+
+.nav_section {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0.5em 0;
+    padding-left: 0.8em;
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav_section_title {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+    padding: 0.6em 0.8em 0.4em;
+}
+
+.nav_section .nav_link {
+    font-size: 1.5em;
+    padding: 0.4em 0.8em;
 }
