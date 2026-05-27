@@ -1,9 +1,5 @@
-
-
 const Aside = () => {
-  return (
-    <div>Este es el aside</div>
-  )
-}
+  return <div>Este es el aside</div>;
+};
 
-export default Aside
+export default Aside;
