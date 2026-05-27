@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import Layout from "@components/layout";
 import Home from "../pages/home/Home";
 import FichaDani from "../pages/fichas/FichaDani";
 import FichaLean from "../pages/fichas/FichaLean";
@@ -8,7 +9,7 @@ import Bitacora from "../pages/bitacora/Bitacora";
 
 const AppRouter = () => {
   return (
-    <>
+    <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ficha-dani" element={<FichaDani />} />
@@ -17,7 +18,7 @@ const AppRouter = () => {
         <Route path="/ficha-luma" element={<FichaLuma />} />
         <Route path="/bitacora" element={<Bitacora />} />
       </Routes>
-    </>
+    </Layout>
   );
 };
 
