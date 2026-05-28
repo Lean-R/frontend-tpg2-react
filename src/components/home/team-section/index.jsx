@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./team-section.module.css";
 
 const TEAM_MEMBERS = [
@@ -6,32 +7,34 @@ const TEAM_MEMBERS = [
     role: "Lead Barista Backend",
     img: "./img/backend-dev.jpg",
     alt: "Avatar Backend Dev",
-    profileHref: "backend-dev.html",
+    profileHref: "/ficha-lean",
   },
   {
     name: "Naty Coffee Debugger",
     role: "QA Taster & Latte Art Artist",
     img: "./img/qa-tester.jpg",
     alt: "Avatar QA Dev",
-    profileHref: "qa-taster-frontend-latte-artist.html",
+    profileHref: "/ficha-naty",
   },
   {
     name: "Luma Blend Maker",
     role: "Full-Stack Roaster",
     img: "./img/fsr-crop.png",
     alt: "Avatar Full-Stack Dev",
-    profileHref: "full-stack-roaster.html",
+    profileHref: "/ficha-luma",
   },
   {
     name: "Dany Deploy Keeper",
     role: "DevOps Supply Chain Manager",
     img: "./img/devops-supply.jpg",
     alt: "Avatar DevOps Dev",
-    profileHref: "devops-supply-chain.html",
+    profileHref: "/ficha-dani",
   },
 ];
 
 export default function TeamSection() {
+  const navigate = useNavigate();
+
   /*  Click en nombre del miembro: efecto glow temporal  */
   const handleMemberClick = (e) => {
     const el = e.currentTarget;
@@ -45,15 +48,14 @@ export default function TeamSection() {
   };
 
   /*  Click en botón de perfil: feedback visual + navegación  */
-  const handleProfileClick = (e) => {
+  const handleProfileClick = (e, url) => {
     e.preventDefault();
     const btn = e.currentTarget;
-    const url = btn.getAttribute("href");
 
     btn.style.transform = "scale(0.95)";
 
     setTimeout(() => {
-      window.location.href = url;
+      navigate(url);
     }, 500);
   };
 
@@ -81,13 +83,12 @@ export default function TeamSection() {
                 {member.name}
               </h3>
               <p className={styles.memberRole}>{member.role}</p>
-              <a
-                href={member.profileHref}
+              <button
                 className={styles.btnProfile}
-                onClick={handleProfileClick}
+                onClick={(e) => handleProfileClick(e, member.profileHref)}
               >
                 [ Cargar Perfil ]
-              </a>
+              </button>
             </div>
           </div>
         ))}
