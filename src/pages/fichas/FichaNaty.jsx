@@ -1,7 +1,10 @@
 
 const FichaNaty = () => {
   return (
+
     <div>FichaNaty</div>
+
+
   )
 }
 

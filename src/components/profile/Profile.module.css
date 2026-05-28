@@ -1,0 +1,12 @@
+
+
+/* 2. Contenedor de la Tarjeta */
+.id_card {
+  max-width: 800px;
+  margin: 15rem auto;
+  border: 2px solid var(--color-acento-primario);
+  background: #222;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 2rem rgba(210, 105, 30, 0.2);
+}

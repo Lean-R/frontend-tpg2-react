@@ -1,36 +1,66 @@
 {
-  "media": {
-    "trek": {
+  "name": "LUMA",
+  "role": "Full-Stack Roaster",
+  "version": "ROASTER_V2.0",
+  "ageInfo": "21 ( + 27 )",
+  "origin": "Mendoza",
+  "profile_img": "/img/fsr.png",
+  "recipe": "Mi receta mezcla la intensidad del backend con la frescura del frontend. Como un blend de autor, combina estructura, lógica e interacción.",
+  "skills": ["Frontend Fresco", "Backend Tostado", "JS (El Conector)", "Responsive Sips", "GitHub Bar"],
+  "workingWay": "Busco el punto justo: que nada quede crudo (sin lógica) ni quemado (código bloqueante). La conexión estable es mi especialidad.",
+  "footerQuote": "Encargada de manejar el fuego del servidor y la frescura del frontend en una sola taza.",
+  "btnPreparar": ">> Preparar mi blend",
+  "btnServir": ">> Servir blend full-stack",
+  "films": [
+    { 
+      "id": "trek", 
+      "name": "☕ Stark Trek – Primer Contacto (1996)", 
       "text": "Un blend futurista con cuerpo intenso. Notas de tecnología vintage y un retrogusto a exploración espacial profunda.",
       "image": "./img/media-luma/trek.png"
     },
-    "suenos": {
-      "text": "Cuerpo ligero y dulzor nostálgico. Aroma a césped recién cortado y esperanza tostada a fuego lento.",
-      "image": "./img/media-luma/suenos.png"
+    { 
+      "id": "suenos", 
+      "name": "☕ El campo de los Sueños (1989)", 
+      "text": "Cuerpo ligero y dulzor nostálgico. Aroma a césped recién cortado y esperanza tostada a fuego lento.", 
+      "image": "./img/media-luma/suenos.png" 
     },
-    "michael": {
-      "text": "Un café suave con toques celestiales. Notas dulces de vainilla y un aroma que reconforta el alma.",
-      "image": "./img/media-luma/michael.png"
+    { 
+      "id": "michael", 
+      "name": "☕ Michael (1996)", 
+      "text": "Un café suave con toques celestiales. Notas dulces de vainilla y un aroma que reconforta el alma.", 
+      "image": "./img/media-luma/michael.png" 
     },
-    "vida": {
-      "text": "Un clásico de origen único. Equilibrio perfecto entre amargor y dulzura, con un final persistente de gratitud.",
-      "image": "./img/media-luma/vida.png"
-    },
-    "dire": {
-      "text": "Tostado medio con ritmo equilibrado. Notas ácidas de guitarra limpia y un final largo y elegante.",
-      "image": "./img/media-luma/dire.png"
-    },
-    "alicia": {
-      "text": "Esencia pura y robusta. Un blend con alma de soul, notas de piano aterciopelado y mucha fuerza.",
-      "image": "./img/media-luma/alicia.png"
-    },
-    "queen": {
-      "text": "Una mezcla explosiva de granos seleccionados. Gran cuerpo, intensidad máxima y una acidez vibrante.",
-      "image": "./img/media-luma/queen.png"
-    },
-    "beatles": {
-      "text": "El blend más icónico del mundo. Notas de vanguardia, armonía cítrica y un aroma que nunca pasa de moda.",
-      "image": "./img/media-luma/beatles.png"
+    { 
+      "id": "vida", 
+      "name": "☕ Qué bello es vivir (1946)", 
+      "text": "Un clásico de origen único. Equilibrio perfecto entre amargor y dulzura, con un final persistente de gratitud.", 
+      "image": "./img/media-luma/vida.png" 
     }
-  }
+  ],
+  "discs": [
+    { 
+      "id": "dire", 
+      "name": "☕ Sultans of swing The very best of Dire Straits",
+      "text": "Tostado medio con ritmo equilibrado. Notas ácidas de guitarra limpia y un final largo y elegante.",
+      "image": "./img/media-luma/dire.png" 
+    },
+    { 
+      "id": "alicia", 
+      "name": "☕ As I am Alicia Keys",
+      "text": "Esencia pura y robusta. Un blend con alma de soul, notas de piano aterciopelado y mucha fuerza.",
+      "image": "./img/media-luma/alicia.png" 
+    },
+    { 
+      "id": "queen", 
+      "name": "☕ Greatest Hits III Queen",
+      "text": "Una mezcla explosiva de granos seleccionados. Gran cuerpo, intensidad máxima y una acidez vibrante.",
+      "image": "./img/media-luma/queen.png" 
+    },
+    { 
+      "id": "beatles", 
+      "name": "☕ Abbey Road The Beatles",
+      "text": "El blend más icónico del mundo. Notas de vanguardia, armonía cítrica y un aroma que nunca pasa de moda.",
+      "image": "./img/media-luma/beatles.png" 
+    }
+  ]
 }
