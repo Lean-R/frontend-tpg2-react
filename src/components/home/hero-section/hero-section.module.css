@@ -6,6 +6,7 @@
     justify-content: space-around;
     padding: 0 10rem 0 10rem;
     gap: 2rem;
+    min-height: calc(100vh - 95px);
 }
 
 /*  Columna izquierda (logo + texto)  */
