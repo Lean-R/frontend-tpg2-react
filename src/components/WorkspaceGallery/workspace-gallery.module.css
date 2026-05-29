@@ -1,0 +1,423 @@
+/*  Sección contenedora  */
+.gallerySection {
+    font-size: 16px;
+    padding: 5rem 5%;
+    background: var(--color-fondo-principal, #1a1a1a);
+    text-align: center;
+}
+
+.sectionTitle {
+    font-family: var(--font-titulos, "Space Mono", monospace);
+    font-size: 2.2em;
+    color: var(--color-texto-principal, #f5f5dc);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.sectionSubtitle {
+    font-size: 1.1em;
+    color: var(--color-acento-secundario, #00ff41);
+    margin-bottom: 3rem;
+    font-weight: 300;
+    font-family: var(--font-texto, "Roboto", sans-serif);
+}
+
+/*  Grid de miniaturas  */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/*  Tarjeta individual  */
+.card {
+    position: relative;
+    border-radius: 0.8em;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 16 / 10;
+    background: var(--color-fondo-principal-80, #262626);
+    border: 1px solid rgba(210, 105, 30, 0.2); /* naranja tenue */
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    border-color: var(--color-acento-primario, #d2691e);
+    box-shadow:
+        0 8px 32px rgba(210, 105, 30, 0.25),
+        0 0 0 1px rgba(210, 105, 30, 0.4);
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition:
+        filter 0.35s ease,
+        transform 0.35s ease;
+}
+
+.card:hover .thumbnail {
+    filter: brightness(1.15);
+    transform: scale(1.05);
+}
+
+/*  Overlay con nombre  */
+.cardOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 1.2rem;
+    background: linear-gradient(
+        to top,
+        rgba(26, 26, 26, 0.85) 0%,
+        rgba(26, 26, 26, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.card:hover .cardOverlay {
+    opacity: 1;
+}
+
+.cardLabel {
+    font-family: var(--font-titulos, "Space Mono", monospace);
+    font-size: 0.85em;
+    color: var(--color-texto-principal, #f5f5dc);
+    text-align: left;
+}
+
+.cardLabelIcon {
+    color: var(--color-acento-primario, #d2691e);
+    margin-right: 0.4em;
+}
+
+/* Lightbox. modal a pantalla completa */
+.backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*  Contenedor interno del lightbox  */
+.lightboxContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 85vh;
+    user-select: none;
+}
+
+/*  Contenedor de la imagen (recorta el zoom)  */
+.imageWrapper {
+    overflow: hidden;
+    border-radius: 0.6em;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+}
+
+.lightboxImage {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+}
+
+.lightboxImage.zoomed {
+    cursor: grab;
+}
+
+/*  Barra de información inferior  */
+.lightboxInfo {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-titulos, "Space Mono", monospace);
+    font-size: 0.8em;
+    color: var(--color-text-muted, rgb(173, 127, 102));
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.lightboxCounter {
+    color: var(--color-acento-primario, #d2691e);
+}
+
+/*  Overlay de descripción (esquina inf-izquierda)  */
+.descOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: min(65%, 500px);
+    z-index: 5;
+    padding: 1.8rem 2rem 1.4rem 2rem;
+    background: linear-gradient(
+        to right,
+        rgba(10, 10, 10, 0.75) 0%,
+        rgba(10, 10, 10, 0.35) 65%,
+        rgba(10, 10, 10, 0) 100%
+    );
+    border-radius: 0 0 0 0.6em;
+    cursor: default;
+    text-align: left;
+    pointer-events: auto;
+    transition: background 0.35s ease;
+}
+
+.descOverlay:hover {
+    background: linear-gradient(
+        to right,
+        rgba(10, 10, 10, 0.92) 0%,
+        rgba(10, 10, 10, 0.55) 70%,
+        rgba(10, 10, 10, 0) 100%
+    );
+}
+
+.descText {
+    font-family: var(--font-texto, "Roboto", sans-serif);
+    font-size: 1em;
+    line-height: 1.6;
+    color: rgba(245, 245, 220, 0.55);
+    margin: 0;
+    transition: color 0.35s ease;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.descOverlay:hover .descText {
+    color: var(--color-texto-principal, #f5f5dc);
+}
+
+/* Botones del lightbox */
+/*  Cierre (X)  */
+.closeBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    background: rgba(38, 38, 38, 0.8);
+    border: 1px solid rgba(210, 105, 30, 0.4);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-texto-principal, #f5f5dc);
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease,
+        border-color 0.25s ease;
+}
+
+.closeBtn:hover {
+    background: rgba(210, 105, 30, 0.3);
+    border-color: var(--color-acento-primario, #d2691e);
+    transform: scale(1.08);
+}
+
+.closeBtn:active {
+    transform: scale(0.95);
+}
+
+/*  Navegación (flechas izquierda / derecha)  */
+.navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(38, 38, 38, 0.75);
+    border: 1px solid rgba(210, 105, 30, 0.3);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-texto-principal, #f5f5dc);
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease,
+        border-color 0.25s ease;
+}
+
+.navBtn:hover {
+    background: rgba(210, 105, 30, 0.3);
+    border-color: var(--color-acento-primario, #d2691e);
+}
+
+.navBtn:active {
+    transform: translateY(-50%) scale(0.92);
+}
+
+.navPrev {
+    left: 0.5rem;
+}
+
+.navNext {
+    right: 0.5rem;
+}
+
+/*  Zoom (+ / -)  */
+.zoomControls {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.zoomBtn {
+    background: rgba(38, 38, 38, 0.8);
+    border: 1px solid rgba(210, 105, 30, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-texto-principal, #f5f5dc);
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease,
+        border-color 0.25s ease;
+}
+
+.zoomBtn:hover {
+    background: rgba(210, 105, 30, 0.3);
+    border-color: var(--color-acento-primario, #d2691e);
+}
+
+.zoomBtn:active {
+    transform: scale(0.92);
+}
+
+.zoomBtn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallerySection {
+        padding: 3rem 3%;
+    }
+
+    .sectionTitle {
+        font-size: 1.8em;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1rem;
+    }
+
+    .lightboxContainer {
+        width: 95vw;
+        height: 70vh;
+    }
+
+    .navBtn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navPrev {
+        left: 0.25rem;
+    }
+
+    .navNext {
+        right: 0.25rem;
+    }
+
+    .closeBtn {
+        width: 38px;
+        height: 38px;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+    .zoomBtn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .descOverlay {
+        max-width: min(80%, 350px);
+        padding: 1.2rem 1.2rem 1rem 1.2rem;
+    }
+
+    .descText {
+        font-size: 0.75em;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .card {
+        aspect-ratio: 16 / 9;
+    }
+
+    .lightboxContainer {
+        width: 100vw;
+        height: 60vh;
+    }
+
+    .lightboxInfo {
+        font-size: 0.7em;
+        bottom: -2rem;
+    }
+
+    .descOverlay {
+        max-width: 90%;
+        padding: 1rem 1rem 0.8rem 1rem;
+    }
+
+    .descText {
+        font-size: 0.7em;
+        line-height: 1.4;
+    }
+}
