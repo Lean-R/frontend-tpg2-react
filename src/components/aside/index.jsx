@@ -1,6 +1,11 @@
 import styles from "./Aside.module.css";
 import { NavLink } from "react-router-dom";
-import { IconHome, IconStar, IconNotebook } from "@tabler/icons-react";
+import {
+  IconHome,
+  IconStar,
+  IconNotebook,
+  IconTicket,
+} from "@tabler/icons-react";
 
 const Aside = () => {
   return (
@@ -61,6 +66,16 @@ const Aside = () => {
             Luma
           </NavLink>
         </div>
+
+        <NavLink
+          to="/tickets"
+          className={({ isActive }) =>
+            isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
+          }
+        >
+          <IconTicket className={styles.nav_icon} size={18} />
+          Tickets
+        </NavLink>
 
         <NavLink
           to="/bitacora"
