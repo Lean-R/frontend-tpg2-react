@@ -17,6 +17,20 @@
     { "name": "Responsive Sips (CSS/Tailwind) ", "level": 80 },
     { "name": "GitHub Bar (Git/Workflow) ", "level": 85 }
   ],
+"techStack": [
+  "react",
+  "javascript",
+  "nodejs",
+  "css",
+  "git",
+  "vite",
+  "mongodb"
+],
+"socialMedia": {
+  "github": "https://github.com/Luma2001",
+  "linkedin": "https://linkedin.com/in/",
+  "instagram": "https://instagram.com/"
+},
   "films": [
     { 
       "id": "trek", 

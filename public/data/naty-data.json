@@ -18,6 +18,20 @@
     { "name": "GitHub Bar ", "level": 85 },
     { "name": "Revisión de bugs amargos ", "level": 95 }
   ],
+"techStack": [
+  "selenium",
+  "postman",
+  "cypress",
+  "jira",
+  "javascript",
+  "git",
+  "testing"
+],
+"socialMedia": {
+  "github": "https://github.com/NatyBu26",
+  "linkedin": "https://linkedin.com/in/",
+  "instagram": "https://instagram.com/"
+},
   "films": [
     
     { 

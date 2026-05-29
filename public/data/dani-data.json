@@ -17,6 +17,21 @@
     { "name": "Control de Versiones ", "level": 80 },
     { "name": "GitHub Bar ", "level": 85 }
   ],
+"techStack": [
+  "docker",
+  "linux",
+  "aws",
+  "terraform",
+  "git",
+  "jenkins",
+  "kubernetes"
+],
+"socialMedia": {
+  "github": "https://github.com/danielclementin",
+  "linkedin": "https://linkedin.com/in/",
+  "instagram": "https://instagram.com/"
+},
+
   "films": [
     
     { 
