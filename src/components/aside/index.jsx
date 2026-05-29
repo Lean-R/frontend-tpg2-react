@@ -75,7 +75,7 @@ const Aside = () => {
           }
         >
           <IconTicket className={styles.nav_icon} size={18} />
-          Tickets
+          Pedidos
         </NavLink>
 
         <NavLink
