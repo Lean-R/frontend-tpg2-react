@@ -51,7 +51,17 @@ const CardContent = ({data, onExecAction, preparadasCount, servidasCount}) => {
                             <label>INGREDIENTES TÉCNICOS (SKILLS):</label>
                             <ul className={styles.skill_tags}>
                                 {skills && skills.map((skill, index) => (
-                                    <li key={index}>{skill}</li>
+                                    <div key={index} className={styles.skill_item}>
+                                        <div className={styles.skill_info}>
+                                            <span>{`${skill.name}  ${skill.level}%`}</span>
+                                        </div>
+                                        <div className={styles.progress_bar_bg}>
+                                            <div 
+                                            className={styles.progress_bar_fill} 
+                                            style={{ '--progress-width': `${skill.level}%` }}
+                                            />
+                                        </div>
+                                    </div>
                                 ))}
                             </ul>
                         </div>

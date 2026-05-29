@@ -6,11 +6,17 @@
   "origin": "Mendoza",
   "profile_img": "/img/fsr.png",
   "recipe": "Mi receta mezcla la intensidad del backend con la frescura del frontend. Como un blend de autor, combina estructura, lógica e interacción.",
-  "skills": ["Frontend Fresco", "Backend Tostado", "JS (El Conector)", "Responsive Sips", "GitHub Bar"],
   "workingWay": "Busco el punto justo: que nada quede crudo (sin lógica) ni quemado (código bloqueante). La conexión estable es mi especialidad.",
   "footerQuote": "Encargada de manejar el fuego del servidor y la frescura del frontend en una sola taza.",
   "btnPreparar": ">> Preparar mi blend",
   "btnServir": ">> Servir blend full-stack",
+  "skills": [
+    { "name": "Frontend Fresco (React/Next.js) ", "level": 85 },
+    { "name": "Backend Tostado (Node/Express) ", "level": 75 },
+    { "name": "JS/TS (El Conector) ", "level": 90 },
+    { "name": "Responsive Sips (CSS/Tailwind) ", "level": 80 },
+    { "name": "GitHub Bar (Git/Workflow) ", "level": 85 }
+  ],
   "films": [
     { 
       "id": "trek", 
@@ -61,6 +67,48 @@
       "name": "☕ Abbey Road The Beatles",
       "text": "El blend más icónico del mundo. Notas de vanguardia, armonía cítrica y un aroma que nunca pasa de moda.",
       "image": "./img/media-luma/beatles.png" 
+    }
+  ],
+  "projects":[
+    {    
+        
+        "title": "Landing Page para Plataforma de E-commerce",
+        "description":"Simulación No-country: Optimización de Landing Page para plataforma de e-commerce, objetivo mejorar la experiencia del usuario y aumentar las conversiones. Diseño atractivo y funcional, con enfoque en la usabilidad y la navegación intuitiva.",
+        "web": "https://s02-26-equipo18-webbapp-1.onrender.com/",
+        "git":"https://github.com/No-Country-simulation/S02-26-EQUIPO18-WebbApp.git",
+        "img":"/img/media-luma/totalInc.webp",
+        "tags": ["React", "CSS", "JavaScript", "Responsive Design"]  
+        
+    },
+    {    
+        
+        "title": "Estudio Martín Jordanes",
+        "description":"Sitio Web Real en producción. Diseño en React y css modular. Responsive con Home y 4 secciones.",
+        "web": "https://estudio-jordanes.vercel.app/",
+        "git":"",
+        "img":"/img/media-luma/estudioJordanes.webp",
+        "tags": ["React", "CSS", "JavaScript", "Responsive Design"]  
+        
+    },
+    {    
+        
+        "title": "Juego de Adivinanza",
+        "description":"Juega junto con la Vidente Amira: Intenta adivinar en qué número está pensando. A DIVERTIRSE!!!!!! ",
+        "web": "https://luma2001.github.io/juegoadivinanza/",
+        "git":"https://github.com/Luma2001/juegoadivinanza.git",
+        "img":"/img/media-luma/adivinanza.webp",
+        "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]  
+        
+    },
+    {    
+    
+        "title": "Tablero de Notas",
+        "description":"Pizarra para notas rápida. Interfaz agradable y sencilla. Posee ToDo List, Check List e Historial.",
+        "web": "https://pizarranotas.netlify.app/",
+        "git":"https://github.com/Luma2001/tableronotas.git",
+        "img":"/img/media-luma/pizzara.webp",
+        "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+        
     }
   ]
 }

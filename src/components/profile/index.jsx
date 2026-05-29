@@ -10,6 +10,7 @@ import CardContent from './cardContent';
 import CardExtraInfo from './cardExtraInfo';
 import CardFooter from './cardFooter';
 import ModalTerminal from './modalTerminal';
+import ProjectCarousel  from './carousel';
 
 
 const Profile = ({data}) => {
@@ -64,6 +65,7 @@ const Profile = ({data}) => {
                 type={actionType} 
                 memberName={data.name}
             />
+            <ProjectCarousel data={data} />
         </div>
     </div>
   )
