@@ -7,6 +7,8 @@ import FichaNaty from "../pages/fichas/FichaNaty";
 import FichaLuma from "../pages/fichas/FichaLuma";
 import Bitacora from "../pages/bitacora/Bitacora";
 import CoffeeMenu from "../pages/coffeeMenu/CoffeeMenu";
+import ProductionTickets from "../pages/ProductionTickets/ProductionTickets";
+import CoffeeRoute from "../pages/CoffeeRoute";
 
 const AppRouter = () => {
   return (
@@ -19,6 +21,8 @@ const AppRouter = () => {
         <Route path="/ficha-luma" element={<FichaLuma />} />
         <Route path="/bitacora" element={<Bitacora />} />
         <Route path="/coffee-menu" element={<CoffeeMenu />} />
+        <Route path="/tickets" element={<ProductionTickets />} />
+        <Route path="/coffee-route" element={<CoffeeRoute />} />
       </Routes>
     </Layout>
   );

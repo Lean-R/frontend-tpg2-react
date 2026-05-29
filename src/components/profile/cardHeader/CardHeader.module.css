@@ -1,0 +1,44 @@
+/* 3. Encabezado */
+.card_header {
+  background-color: var(--color-acento-primario);
+  color: var(--color-fondo-principal);
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between; /* Empuja los elementos a los extremos */
+  align-items: center;
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.header_left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back_link {
+  text-decoration: none;
+  color: var(
+    --color-fondo-principal
+  ); /* Color oscuro para contrastar con el naranja */
+  font-size: 1.2rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--color-fondo-principal);
+  border-radius: 0.4rem;
+  transition: all 0.3s ease;
+}
+
+.back_link:hover {
+  background-color: var(--color-fondo-principal);
+  color: var(--color-acento-primario);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.status_dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-acento-secundario);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--color-acento-secundario);
+}

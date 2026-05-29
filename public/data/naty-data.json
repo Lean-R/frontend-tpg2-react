@@ -1,36 +1,119 @@
 {
-    "media": {
-        "mamma-mia": {
-            "text": "Un latte alegre y luminoso, con notas de verano, música y reencuentros familiares. Dulce, espumoso y con retrogusto a canción compartida.",
-            "image": "img/media-naty/mamma-mia.jpg"
-        },
-        "love-actually": {
-            "text": "Un capuchino navideño, cálido y lleno de pequeñas historias. Mezcla notas de ternura, humor y emoción, con un final suave y reconfortante.",
-            "image": "img/media-naty/love-actually.jpg"
-        },
-        "harry-sally": {
-            "text": "Un café clásico de conversación lenta, con notas de amistad, ironía y romance inesperado. Ideal para saborear entre diálogos inteligentes y encuentros a destiempo.",
-            "image": "./img/media-naty/harry-sally.jpg"
-        },
-        "inseparables": {
-            "text": "Un café intenso y emocional, con cuerpo de amistad profunda y notas de lealtad, recuerdos y compañía. Deja un retrogusto sensible, de esos que permanecen después del último sorbo.",
-            "image": "./img/media-naty/inseparables.jpg"
-        },
-        "miranda-corazon": {
-            "text": "Un latte pop brillante y dulce, con notas de baile, teatralidad y corazones en modo remix. Espumoso, colorido y con final pegadizo.",
-            "image": "./img/media-naty/miranda-corazon.jpg"
-        },
-        "babasonicos-anoche": {
-            "text": "Un espresso nocturno y elegante, con cuerpo intenso, notas de deseo, misterio y guitarras oscuras. Deja un retrogusto moderno y seductor.",
-            "image": "./img/media-naty/babasonicos-anoche.jpg"
-        },
-        "foo-hits": {
-            "text": "Un café americano bien cargado, con notas de guitarras potentes, energía de escenario y estribillos fuertes. Intenso, directo y con final explosivo.",
-            "image": "./img/media-naty/foo-hits.jpg"
-        },
-        "cerati-fuerza": {
-            "text": "Un café de autor suave y profundo, con notas orgánicas, paisajes sonoros y una calma luminosa. Delicado, envolvente y con retrogusto poético.",
-            "image": "./img/media-naty/cerati-fuerza.jpg"
-        }
+  "name": "NATY",
+  "role": "COFFEE DEBUGGER",
+  "version": "QA_TASTER_V1.0",
+  "ageInfo": "21 ( + 30 )",
+  "origin": "Buenos Aires",
+  "profile_img": "/img/qa-tester.jpg",
+  "recipe": "Mi receta combina una taza bien estructurada de HTML, una espuma visual de CSS y un shot de JavaScript para darle energía e interacción a cada interfaz.",
+  "workingWay": "Me gusta pensar cada proyecto como un café de autor: ordeno los ingredientes, observo qué necesita la propuesta y busco equilibrio entre estructura, diseño e interacción. Así como un buen latte requiere paciencia y una presentación cuidada, una interfaz también necesita claridad, detalle y pruebas antes de servirse.",
+  "footerQuote": "'Especialista en probar cada sorbo de la interfaz antes de servirla, cuidando que la experiencia llegue clara, cálida y sin bugs amargos.'",
+  "btnPreparar": ">> Preparar mi latte frontend",
+  "btnServir": ">> Servir latte frontend",
+  "skills": [
+    { "name": "HTML semático ", "level": 85 },
+    { "name": "CSS espumoso ", "level": 75 },
+    { "name": "JS activo ", "level": 90 },
+    { "name": "Diseño responsive ", "level": 80 },
+    { "name": "GitHub Bar ", "level": 85 },
+    { "name": "Revisión de bugs amargos ", "level": 95 }
+  ],
+  "films": [
+    
+    { 
+      "id": "mamma-mia", 
+      "name": "☕ Mamma Mia (2000)", 
+      "text": "Un latte alegre y luminoso, con notas de verano, música y reencuentros familiares. Dulce, espumoso y con retrogusto a canción compartida.",
+      "image": "img/media-naty/mamma-mia.jpg"
+    },
+    { 
+      "id": "love-actually", 
+      "name": "☕ Love Actually (2003)", 
+      "text": "Un capuchino navideño, cálido y lleno de pequeñas historias. Mezcla notas de ternura, humor y emoción, con un final suave y reconfortante.", 
+      "image": "img/media-naty/love-actually.jpg" 
+    },
+    { 
+      "id": "harry-sally", 
+      "name": "☕ Cuando Harry conoció a Sally (1996)", 
+      "text": "Un café clásico de conversación lenta, con notas de amistad, ironía y romance inesperado. Ideal para saborear entre diálogos inteligentes y encuentros a destiempo.", 
+      "image": "img/media-naty/harry-sally.jpg" 
+    },
+    { 
+      "id": "inseparables", 
+      "name": "☕ Inseparables (2016)", 
+      "text": "Un café intenso y emocional, con cuerpo de amistad profunda y notas de lealtad, recuerdos y compañía. Deja un retrogusto sensible, de esos que permanecen después del último sorbo.", 
+      "image": "/img/media-naty/inseparables.jpg" 
     }
+  ],
+  "discs": [
+    { 
+      "id": "miranda-corazon", 
+      "name": "☕ Corazón de Miranda 🎸",
+      "text": "Un latte pop brillante y dulce, con notas de baile, teatralidad y corazones en modo remix. Espumoso, colorido y con final pegadizo.",
+      "image": "/img/media-naty/miranda-corazon.jpg" 
+    },
+    { 
+      "id": "babasonicos-anoche", 
+      "name": "☕ Anoche Babasónicos 🎸",
+      "text": "Un espresso nocturno y elegante, con cuerpo intenso, notas de deseo, misterio y guitarras oscuras. Deja un retrogusto moderno y seductor.",
+      "image": "/img/media-naty/babasonicos-anoche.jpg" 
+    },
+    { 
+      "id": "foo-hits", 
+      "name": "☕ Foo Fighters Greatest Hits 🎸",
+      "text": "Un café americano bien cargado, con notas de guitarras potentes, energía de escenario y estribillos fuertes. Intenso, directo y con final explosivo.",
+      "image": "/img/media-naty/foo-hits.jpg"
+    },
+    { 
+      "id": "cerati-fuerza", 
+      "name": "☕ Fuerza Natural Gustavo Cerati 🎸",
+      "text": "Un café de autor suave y profundo, con notas orgánicas, paisajes sonoros y una calma luminosa. Delicado, envolvente y con retrogusto poético.",
+      "image": "/img/media-naty/cerati-fuerza.jpg" 
+    }
+  ],
+  "projects":[
+    {    
+        
+        "title": "Landing Page para Plataforma de E-commerce",
+        "description":"Simulación No-country: Optimización de Landing Page para plataforma de e-commerce, objetivo mejorar la experiencia del usuario y aumentar las conversiones. Diseño atractivo y funcional, con enfoque en la usabilidad y la navegación intuitiva.",
+        "web": "https://s02-26-equipo18-webbapp-1.onrender.com/",
+        "git":"https://github.com/No-Country-simulation/S02-26-EQUIPO18-WebbApp.git",
+        "img":"/img/media-luma/totalInc.webp",
+        "tags": ["React", "CSS", "JavaScript", "Responsive Design"]  
+        
+    },
+    {    
+        
+        "title": "Estudio Martín Jordanes",
+        "description":"Sitio Web Real en producción. Diseño en React y css modular. Responsive con Home y 4 secciones.",
+        "web": "https://estudio-jordanes.vercel.app/",
+        "git":"",
+        "img":"/img/media-luma/estudioJordanes.webp",
+        "tags": ["React", "CSS", "JavaScript", "Responsive Design"]  
+        
+    },
+    {    
+        
+        "title": "Juego de Adivinanza",
+        "description":"Juega junto con la Vidente Amira: Intenta adivinar en qué número está pensando. A DIVERTIRSE!!!!!! ",
+        "web": "https://luma2001.github.io/juegoadivinanza/",
+        "git":"https://github.com/Luma2001/juegoadivinanza.git",
+        "img":"/img/media-luma/adivinanza.webp",
+        "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]  
+        
+    },
+    {    
+    
+        "title": "Tablero de Notas",
+        "description":"Pizarra para notas rápida. Interfaz agradable y sencilla. Posee ToDo List, Check List e Historial.",
+        "web": "https://pizarranotas.netlify.app/",
+        "git":"https://github.com/Luma2001/tableronotas.git",
+        "img":"/img/media-luma/pizzara.webp",
+        "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+        
+    }
+  ]
 }
+
+
+

@@ -1,0 +1,586 @@
+/*  Página  */
+.page {
+    font-size: 18px;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding: 2.5rem 2.5rem 4rem;
+    min-height: calc(100vh - 95px);
+    background: var(--color-fondo-principal, #1a1a1a);
+}
+
+/*  Encabezado  */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.headerTitle {
+    font-family: var(--font-titulos, "Space Mono", monospace);
+    font-size: 2em;
+    color: var(--color-texto-principal, #f5f5dc);
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.headerSubtitle {
+    font-size: 0.95em;
+    color: var(--color-text-muted, rgb(173, 127, 102));
+    font-family: var(--font-texto, "Roboto", sans-serif);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid rgba(210, 105, 30, 0.12);
+    margin: 1.8rem 0;
+}
+
+/*  Contenedor del árbol: flex column para que baje en cascada  */
+.tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+}
+
+/*  Nivel individual  */
+.level {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.2rem;
+    width: 100%;
+    position: relative;
+}
+
+/*  Cada nivel tiene un padding vertical para separación  */
+.levelRoot {
+    padding-bottom: 0.5rem;
+}
+
+.levelTop {
+    padding: 1.5rem 0 0.5rem;
+}
+
+.levelMid {
+    padding: 1.5rem 0 0.5rem;
+}
+
+.levelLeaf {
+    padding: 1.5rem 0 0;
+}
+
+/*  Etiqueta del nivel  */
+.levelLabel {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-titulos, "Space Mono", monospace);
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(210, 105, 30, 1);
+    margin-bottom: 0.6rem;
+    position: relative;
+}
+
+.levelLabel::before,
+.levelLabel::after {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: rgba(210, 105, 30, 0.12);
+    vertical-align: middle;
+    margin: 0 0.6rem;
+}
+
+/*  Tuberías entre niveles (conectores)  */
+.pipeSection {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    position: relative;
+    height: 24px;
+}
+
+.pipeVertical {
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        rgba(210, 105, 30, 0.08),
+        rgba(210, 105, 30, 0.35),
+        rgba(210, 105, 30, 0.08)
+    );
+}
+
+.pipeSplit {
+    position: relative;
+    width: 60%;
+    max-width: 500px;
+    height: 100%;
+}
+
+.pipeSplit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(210, 105, 30, 0.2) 20%,
+        rgba(210, 105, 30, 0.2) 80%,
+        transparent 100%
+    );
+}
+
+.pipeSplit::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(210, 105, 30, 0.3),
+        rgba(210, 105, 30, 0.05)
+    );
+}
+
+/*  Tubería con bifurcaciones laterales  */
+.pipeBranch {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    height: 100%;
+}
+
+.pipeBranch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(210, 105, 30, 0.2) 15%,
+        rgba(210, 105, 30, 0.2) 85%,
+        transparent 100%
+    );
+}
+
+.pipeBranchJoint {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(210, 105, 30, 0.3),
+        rgba(210, 105, 30, 0.05)
+    );
+}
+
+.pipeBranchJoint:nth-child(1) {
+    left: 25%;
+}
+
+.pipeBranchJoint:nth-child(2) {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pipeBranchJoint:nth-child(3) {
+    right: 25%;
+    left: auto;
+}
+
+.node {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.6em;
+    background: var(--color-fondo-principal-80, #262626);
+    border: 1px solid rgba(210, 105, 30, 0.18);
+    cursor: default;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    text-align: center;
+    min-width: 100px;
+    max-width: 200px;
+}
+
+.node:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-acento-primario, #d2691e);
+    box-shadow:
+        0 6px 20px rgba(210, 105, 30, 0.18),
+        0 0 0 1px rgba(210, 105, 30, 0.12);
+}
+
+/*  Tamaños de nodo según nivel  */
+.nodeRoot {
+    padding: 1rem 2rem;
+    min-width: 140px;
+    border-width: 2px;
+    border-color: rgba(210, 105, 30, 0.35);
+}
+
+.nodeRoot:hover {
+    border-color: var(--color-acento-primario, #d2691e);
+}
+
+.nodeTop {
+    border-color: rgba(0, 255, 65, 0.12);
+}
+
+.nodeTop:hover {
+    border-color: var(--color-acento-secundario, #00ff41);
+}
+
+.nodeMid {
+    border-color: rgba(210, 105, 30, 0.15);
+}
+
+.nodeLeaf {
+    border-color: rgba(210, 105, 30, 0.1);
+    padding: 0.6rem 0.9rem;
+    min-width: 80px;
+    max-width: 160px;
+}
+
+.nodeLeaf:hover {
+    border-color: rgba(245, 245, 220, 0.3);
+}
+
+/*  Contenido del nodo  */
+.nodeIcon {
+    font-size: 1.2em;
+    line-height: 1;
+    margin-bottom: 0.1rem;
+}
+
+.nodeName {
+    font-family: var(--font-titulos, "Space Mono", monospace);
+    font-size: 0.75em;
+    color: var(--color-texto-principal, #f5f5dc);
+    font-weight: 600;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+.nodeExt {
+    font-size: 0.55em;
+    color: var(--color-text-muted, rgb(173, 127, 102));
+    font-family: var(--font-texto, "Roboto", sans-serif);
+    opacity: 0.6;
+}
+
+/*  Tooltip al hover  */
+.tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 260px;
+    padding: 0.6rem 0.8rem;
+    background: rgba(10, 10, 10, 0.95);
+    border: 1px solid rgba(210, 105, 30, 0.3);
+    border-radius: 0.5em;
+    font-family: var(--font-texto, "Roboto", sans-serif);
+    font-size: 0.7em;
+    color: var(--color-texto-principal, #f5f5dc);
+    line-height: 1.5;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.node:hover .tooltip {
+    opacity: 1;
+}
+
+.tooltipArrow {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(210, 105, 30, 0.3);
+}
+
+.tooltipArrow::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    border: 5px solid transparent;
+    border-top-color: rgba(10, 10, 10, 0.95);
+}
+
+/*  Etiqueta de rol secundario  */
+.nodeRole {
+    font-size: 0.5em;
+    font-family: var(--font-titulos, "Space Mono", monospace);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--color-acento-secundario, #00ff41);
+    opacity: 0.5;
+    margin-top: 0.1rem;
+}
+
+.subGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    padding: 0.5rem 0 0;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    background: var(--color-fondo-principal-80, #262626);
+    border: 1px solid rgba(210, 105, 30, 0.1);
+    border-radius: 0.6em;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-titulos, "Space Mono", monospace);
+    font-size: 0.6em;
+    color: var(--color-text-muted, rgb(173, 127, 102));
+}
+
+.legendDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid;
+    flex-shrink: 0;
+}
+
+.legendDotRoot {
+    border-color: var(--color-acento-primario, #d2691e);
+    background: rgba(210, 105, 30, 0.15);
+}
+
+.legendDotTop {
+    border-color: var(--color-acento-secundario, #00ff41);
+    background: rgba(0, 255, 65, 0.08);
+}
+
+.legendDotMid {
+    border-color: var(--color-acento-primario, #d2691e);
+    background: rgba(210, 105, 30, 0.08);
+}
+
+.legendDotLeaf {
+    border-color: var(--color-texto-principal, #f5f5dc);
+    background: rgba(245, 245, 220, 0.06);
+}
+
+@media (max-width: 1024px) {
+    .page {
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    .node {
+        min-width: 90px;
+        max-width: 170px;
+        padding: 0.6rem 0.9rem;
+    }
+
+    .nodeRoot {
+        min-width: 120px;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .nodeLeaf {
+        min-width: 70px;
+        max-width: 140px;
+        padding: 0.5rem 0.7rem;
+    }
+
+    .pipeSplit {
+        width: 70%;
+    }
+
+    .pipeBranch {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page {
+        padding: 1.5rem 0.8rem 2.5rem;
+    }
+
+    .headerTitle {
+        font-size: 1.5em;
+    }
+
+    .headerSubtitle {
+        font-size: 0.85em;
+    }
+
+    .level {
+        gap: 0.8rem;
+    }
+
+    .levelRoot {
+        padding-bottom: 0.3rem;
+    }
+
+    .levelTop,
+    .levelMid,
+    .levelLeaf {
+        padding: 1rem 0 0.3rem;
+    }
+
+    .node {
+        min-width: 75px;
+        max-width: 130px;
+        padding: 0.5rem 0.6rem;
+    }
+
+    .nodeRoot {
+        min-width: 100px;
+        padding: 0.6rem 1rem;
+    }
+
+    .nodeLeaf {
+        min-width: 65px;
+        max-width: 110px;
+        padding: 0.4rem 0.5rem;
+    }
+
+    .nodeName {
+        font-size: 0.65em;
+    }
+
+    .nodeExt {
+        font-size: 0.5em;
+    }
+
+    .nodeIcon {
+        font-size: 1em;
+    }
+
+    .subGroup {
+        gap: 0.7rem;
+    }
+
+    .pipeSection {
+        height: 16px;
+    }
+
+    .tooltip {
+        max-width: 200px;
+        font-size: 0.6em;
+        bottom: calc(100% + 6px);
+    }
+
+    .legend {
+        gap: 0.8rem;
+        padding: 0.7rem 0.8rem;
+    }
+
+    .legendItem {
+        font-size: 0.55em;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 1rem 0.5rem 2rem;
+    }
+
+    .headerTitle {
+        font-size: 1.3em;
+    }
+
+    .headerSubtitle {
+        font-size: 0.8em;
+    }
+
+    .level {
+        gap: 0.6rem;
+    }
+
+    .node {
+        min-width: 60px;
+        max-width: 100px;
+        padding: 0.4rem 0.4rem;
+    }
+
+    .nodeRoot {
+        min-width: 80px;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .nodeLeaf {
+        min-width: 55px;
+        max-width: 90px;
+        padding: 0.3rem 0.4rem;
+    }
+
+    .nodeName {
+        font-size: 0.55em;
+    }
+
+    .nodeExt {
+        font-size: 0.45em;
+    }
+
+    .nodeIcon {
+        font-size: 0.85em;
+    }
+
+    .subGroup {
+        gap: 0.5rem;
+    }
+
+    .pipeSection {
+        height: 12px;
+    }
+
+    .tooltip {
+        display: none;
+    }
+
+    .legend {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
