@@ -27,7 +27,7 @@
 /* 2. Contenedor de la Tarjeta */
 .id_card {
   max-width: 800px;
-  margin: 15rem auto;
+  margin: 2rem auto;
   border: 2px solid var(--color-acento-primario);
   background: transparent;
   border-radius: 1.5rem;
