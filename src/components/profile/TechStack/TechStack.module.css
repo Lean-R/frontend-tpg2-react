@@ -1,0 +1,92 @@
+.tech_stack_section {
+  padding: 2rem 3rem;
+  border-bottom: 1px solid var(--color-fondo-principal-60);
+  background-color: var(--color-fondo-principal);
+}
+
+.section_label {
+  font-family: var(--font-titulos);
+  color: var(--color-acento-secundario);
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1.6rem;
+}
+
+.icons_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+/* Cada item: ícono + label */
+.tech_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: default;
+}
+
+/* Contenedor del ícono con glow relativo */
+.icon_wrapper {
+  position: relative;
+  width: 5.6rem;
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  overflow: hidden;
+}
+
+/* Capa de glow oculta por defecto */
+.icon_glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, var(--tech-color, #fff) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+/* El ícono encima del glow */
+.tech_icon {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* ── Hover ── */
+.tech_item:hover .icon_wrapper {
+  transform: translateY(-4px) scale(1.08);
+  border-color: var(--tech-color, #fff);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px color-mix(in srgb, var(--tech-color, #fff) 30%, transparent);
+}
+
+.tech_item:hover .icon_glow {
+  opacity: 0.15;
+}
+
+.tech_item:hover .tech_icon {
+  color: var(--tech-color, #fff);
+  transform: scale(1.1);
+}
+
+/* Label */
+.tech_label {
+  font-family: var(--font-titulos);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 0.25s ease;
+  letter-spacing: 0.04em;
+}
+
+.tech_item:hover .tech_label {
+  color: var(--tech-color, #fff);
+}
