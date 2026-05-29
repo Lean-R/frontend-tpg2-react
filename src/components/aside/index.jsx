@@ -5,6 +5,7 @@ import {
   IconStar,
   IconNotebook,
   IconTicket,
+  IconRoute,
 } from "@tabler/icons-react";
 
 const Aside = () => {
@@ -75,6 +76,16 @@ const Aside = () => {
         >
           <IconTicket className={styles.nav_icon} size={18} />
           Tickets
+        </NavLink>
+
+        <NavLink
+          to="/coffee-route"
+          className={({ isActive }) =>
+            isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
+          }
+        >
+          <IconRoute className={styles.nav_icon} size={18} />
+          Ruta del Café
         </NavLink>
 
         <NavLink
