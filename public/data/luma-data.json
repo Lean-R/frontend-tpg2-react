@@ -46,25 +46,25 @@
   "discs": [
     { 
       "id": "dire", 
-      "name": "☕ Sultans of swing The very best of Dire Straits",
+      "name": "☕ Sultans of swing The very best of Dire Straits 🎸",
       "text": "Tostado medio con ritmo equilibrado. Notas ácidas de guitarra limpia y un final largo y elegante.",
       "image": "./img/media-luma/dire.png" 
     },
     { 
       "id": "alicia", 
-      "name": "☕ As I am Alicia Keys",
+      "name": "☕ As I am Alicia Keys 🎸",
       "text": "Esencia pura y robusta. Un blend con alma de soul, notas de piano aterciopelado y mucha fuerza.",
       "image": "./img/media-luma/alicia.png" 
     },
     { 
       "id": "queen", 
-      "name": "☕ Greatest Hits III Queen",
+      "name": "☕ Greatest Hits III Queen 🎸",
       "text": "Una mezcla explosiva de granos seleccionados. Gran cuerpo, intensidad máxima y una acidez vibrante.",
       "image": "./img/media-luma/queen.png" 
     },
     { 
       "id": "beatles", 
-      "name": "☕ Abbey Road The Beatles",
+      "name": "☕ Abbey Road The Beatles 🎸",
       "text": "El blend más icónico del mundo. Notas de vanguardia, armonía cítrica y un aroma que nunca pasa de moda.",
       "image": "./img/media-luma/beatles.png" 
     }
@@ -110,5 +110,16 @@
         "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]
         
     }
-  ]
+  ],
+  "techStack": [
+    "react", 
+    "css",
+    "javascript",
+    "nodeJS",
+    "git",
+    "vite",
+    "mongodb"
+  ],
+  "socialMedia": {"GitHub": "https://github.com/Luma2001","LinkedIn": "https://www.linkedin.com/in/luma2001/", "Instagram": "https://instagram.com/" }
+  
 }

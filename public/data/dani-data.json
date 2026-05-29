@@ -1,36 +1,117 @@
 {
-  "media": {
-    "mib3": {
+  "name": "DANI",
+  "role": "DEPLOY KEEPER",
+  "version": "SUPPLY_V2.0",
+  "ageInfo": "21 ( + 16 )",
+  "origin": "Desconocido",
+  "profile_img": "/img/devops-supply.jpg",
+  "recipe": "Mi receta se basa en mantener la barra en funcionamiento: código ordenado, despliegues cuidados y un flujo constante para que el proyecto no se detenga. Como en una cafetería bien organizada, cada paso debe llegar a tiempo y sin cortar el servicio.",
+  "workingWay": "Me gusta pensar el proyecto como una cafetería en pleno movimiento: para que cada pedido salga bien, no pueden faltar granos, leche, vasos, agua ni una máquina funcionando. En el mundo del código pasa algo parecido: el equipo necesita archivos ordenados, versiones cuidadas, un repo claro y un camino seguro para publicar el sitio.",
+  "footerQuote": "'Encargado de que la cafetería digital nunca se quede sin granos, leche, vasos ni código listo para servir. Cuido el flujo del proyecto y me aseguro de que la página pueda publicarse sin interrupciones. Si Vercel se cae, ya tengo el molinillo manual preparado.'",
+  "btnPreparar": ">> Activar flujo de café y código",
+  "btnServir": ">> Activar la barra online",
+  "skills": [
+    { "name": "Deploy ", "level": 85 },
+    { "name": "Vercel ", "level": 75 },
+    { "name": "Flujo de Trabajo ", "level": 90 },
+    { "name": "Control de Versiones ", "level": 80 },
+    { "name": "GitHub Bar ", "level": 85 }
+  ],
+  "films": [
+    
+    { 
+      "id": "mib3", 
+      "name": "☕ Hombres de Negro (2012)🐾", 
       "text": "Un blend de otro mundo. Notas de café espresso clásico con un toque de pug-nacidad. Cuerpo pequeño pero con una presencia que domina la galaxia.",
-      "image": "img/media-dani/mib3.png"
+      "image": "img/media-dani/mbi3.png"
     },
-    "marley": {
-      "text": "Un café caótico pero reconfortante. Notas de travesura y un final persistente que te llena el corazón.",
-      "image": "img/media-dani/marley.png"
+    { 
+      "id": "wick", 
+      "name": "☕ John Wick (2014) 🐾", 
+      "text": "Intenso, oscuro y sin piedad. Un blend con cuerpo robusto diseñado para quienes no se rinden ante la injusticia.", 
+      "image": "img/media-dani/jhon-wick.png" 
     },
-    "hachiko": {
-      "text": "Esencia pura de lealtad. Un tueste que espera pacientemente, con notas profundas y un aroma eterno.",
-      "image": "img/media-dani/hachiko.png"
+    { 
+      "id": "marley", 
+      "name": "☕ Marley y Yo (2008) 🐾", 
+      "text": "Un café caótico pero reconfortante. Notas de travesura y un final persistente que te llena el corazón.", 
+      "image": "img/media-dani/marley.png" 
     },
-    "wick": {
-      "text": "Intenso, oscuro y sin piedad. Un blend con cuerpo robusto diseñado para quienes no se rinden ante la injusticia.",
-      "image": "img/media-dani/john-wick.png"
-    },
-    "animals": {
+    { 
+      "id": "hachiko", 
+      "name": "☕ Hachiko (2009) 🐾", 
+      "text": "Esencia pura de lealtad. Un tueste que espera pacientemente, con notas profundas y un aroma eterno.", 
+      "image": "img/media-dani/hachiko.png" 
+    }
+  ],
+  "discs": [
+    { 
+      "id": "animals", 
+      "name": "☕ Animals - Pink Floyd 🎸",
       "text": "Un blend industrial y complejo. Notas de chocolate amargo con un postgusto metálico. Un tueste progresivo que evoluciona en cada sorbo.",
-      "image": "img/media-dani/pink-floyd-animals.png"
+      "image": "img/media-dani/pink-floyd-animals.png" 
     },
-    "abbey": {
-      "text": "Equilibrio perfecto. Notas clásicas de vainilla y madera. Un café de mañana soleada que todo el mundo reconoce al instante.",
-      "image": "img/media-dani/beatles-abbey.png"
-    },
-    "pet-sounds": {
+    { 
+      "id": "pet-sounds", 
+      "name": "☕ Pet Sounds - The Beach Boys 🎸",
       "text": "Cuerpo ligero y texturas armónicas. Notas cítricas y experimentales. Una taza que se siente como una sinfonía de verano.",
       "image": "img/media-dani/beach-boys-pets.png"
     },
-    "nevermind": {
+    { 
+      "id": "abbey", 
+      "name": "☕ Abbey Road - The Beatles 🎸",
+      "text": "Equilibrio perfecto. Notas clásicas de vainilla y madera. Un café de mañana soleada que todo el mundo reconoce al instante.",
+      "image": "img/media-dani/beatles-abbey.png" 
+    },
+    { 
+      "id": "nevermind", 
+      "name": "☕ Nevermind - Nirvana 🎸",
       "text": "Tostado fuerte y rebelde. Notas de tierra y frescura acuática. Un blend que rompió los esquemas del mercado tradicional.",
-      "image": "img/media-dani/nirvana-nevermind.png"
+      "image": "img/media-dani/nirvana-nevermind.png" 
     }
-  }
+  ],
+  "projects":[
+    {    
+        
+        "title": "Landing Page para Plataforma de E-commerce",
+        "description":"Simulación No-country: Optimización de Landing Page para plataforma de e-commerce, objetivo mejorar la experiencia del usuario y aumentar las conversiones. Diseño atractivo y funcional, con enfoque en la usabilidad y la navegación intuitiva.",
+        "web": "https://s02-26-equipo18-webbapp-1.onrender.com/",
+        "git":"https://github.com/No-Country-simulation/S02-26-EQUIPO18-WebbApp.git",
+        "img":"/img/media-luma/totalInc.webp",
+        "tags": ["React", "CSS", "JavaScript", "Responsive Design"]  
+        
+    },
+    {    
+        
+        "title": "Estudio Martín Jordanes",
+        "description":"Sitio Web Real en producción. Diseño en React y css modular. Responsive con Home y 4 secciones.",
+        "web": "https://estudio-jordanes.vercel.app/",
+        "git":"",
+        "img":"/img/media-luma/estudioJordanes.webp",
+        "tags": ["React", "CSS", "JavaScript", "Responsive Design"]  
+        
+    },
+    {    
+        
+        "title": "Juego de Adivinanza",
+        "description":"Juega junto con la Vidente Amira: Intenta adivinar en qué número está pensando. A DIVERTIRSE!!!!!! ",
+        "web": "https://luma2001.github.io/juegoadivinanza/",
+        "git":"https://github.com/Luma2001/juegoadivinanza.git",
+        "img":"/img/media-luma/adivinanza.webp",
+        "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]  
+        
+    },
+    {    
+    
+        "title": "Tablero de Notas",
+        "description":"Pizarra para notas rápida. Interfaz agradable y sencilla. Posee ToDo List, Check List e Historial.",
+        "web": "https://pizarranotas.netlify.app/",
+        "git":"https://github.com/Luma2001/tableronotas.git",
+        "img":"/img/media-luma/pizzara.webp",
+        "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+        
+    }
+  ]
 }
+
+

@@ -1,10 +1,37 @@
+import Profile from "@components/profile"
+import { useState,useEffect } from "react";
+
+
+
 
 const FichaNaty = () => {
+
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  
+
+  useEffect(() => {
+    fetch("/data/naty-data.json")
+      .then((response) => {
+        if (!response.ok) throw new Error("Error al cargar el perfil")
+        return response.json()
+      })
+      .then((jsonData) => {
+        setData(jsonData);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error al cargar el perfil:", error);
+        setLoading(false);
+      });
+  }, []);
+
+
   return (
-
-    <div>FichaNaty</div>
-
-
+    <>
+      {loading ? <p>Cargando perfil...</p> : <Profile data={data} />}
+    </>
   )
 }
 
