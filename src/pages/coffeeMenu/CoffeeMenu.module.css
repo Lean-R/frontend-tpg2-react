@@ -1,45 +1,218 @@
 .menuPage {
   min-height: 100vh;
-  padding: 8rem 2rem 4rem;
+  padding: 5rem 2rem 4rem;
   background-color: var(--color-fondo-principal);
   color: var(--color-texto-principal);
   font-family: var(--font-texto);
 }
 
-.hero {
-  max-width: 900px;
+/* Panel superior */
+
+.topPanel {
+  max-width: 1200px;
   margin: 0 auto 5rem;
-  text-align: center;
-  border: 2px solid var(--color-acento-primario);
-  background: #222;
-  border-radius: 1.5rem;
-  padding: 3rem;
-  box-shadow: 0 0 2rem rgba(210, 105, 30, 0.2);
+  display: grid;
+  grid-template-columns: minmax(380px, 1.05fr) minmax(340px, 0.95fr);
+  gap: 2rem;
+  align-items: center;
 }
 
-.kicker {
+/* Terminal */
+
+.heroTerminal {
+  border: 2px solid var(--color-acento-primario);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: #1f1f23;
+  box-shadow: 0 0 2rem rgba(210, 105, 30, 0.2);
+  font-family: var(--font-titulos);
+}
+
+.terminalHeader {
+  background: var(--color-acento-primario);
+  color: var(--color-fondo-principal);
+  padding: 0.8rem 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-titulos);
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.terminalHeader span {
+  color: var(--color-fondo-principal);
+}
+
+.terminalBody {
+  padding: 1.45rem 1.7rem 1.25rem;
+  background: #222;
+  font-family: var(--font-titulos);
+}
+
+.terminalMeta {
+  color: #d9b38c;
+  font-family: var(--font-titulos);
+  font-size: 0.98rem;
+  margin: 0.2rem 0;
+}
+
+.terminalPrompt {
   color: var(--color-acento-secundario);
   font-family: var(--font-titulos);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
   font-size: 1.3rem;
-  margin-bottom: 1rem;
+  margin: 1.2rem 0 0.5rem;
 }
 
-.hero h1 {
-  font-family: var(--font-titulos);
+.terminalTitle {
   color: var(--color-acento-primario);
-  font-size: 4rem;
+  font-family: var(--font-titulos);
+  font-size: 3rem;
+  margin: 0 0 0.65rem;
+  line-height: 1.1;
+}
+
+.terminalText {
+  color: var(--color-texto-principal);
+  font-family: var(--font-titulos);
+  font-size: 1.15rem;
+  line-height: 1.45;
   margin: 0 0 1rem;
 }
 
-.hero p {
-  max-width: 720px;
-  margin: 0 auto;
-  color: var(--color-texto-principal);
-  font-size: 1.6rem;
-  line-height: 1.6;
+.terminalTyping {
+  width: fit-content;
+  max-width: 100%;
+  color: var(--color-acento-secundario);
+  font-family: var(--font-titulos);
+  font-size: 1.08rem;
+  line-height: 1.5;
+  margin: 1rem 0 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--color-acento-secundario);
+  animation: typingLine 4s steps(78, end), blinkBorder 0.9s step-end infinite;
 }
+
+.terminalCursor {
+  color: var(--color-acento-secundario);
+  font-family: var(--font-titulos);
+  font-size: 1.25rem;
+  margin: 0;
+  text-align: right;
+  animation: blinkCursor 1s step-end infinite;
+}
+
+/* Animaciones de terminal */
+
+@keyframes typingLine {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkBorder {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blinkCursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Buscador y filtros */
+
+.controlsPanel {
+  border: 1px solid var(--color-acento-secundario);
+  border-radius: 1.2rem;
+  background: #222;
+  padding: 1.5rem;
+  box-shadow: 0 0 1.5rem rgba(0, 255, 120, 0.12);
+  align-self: center;
+}
+
+.searchBox {
+  margin-bottom: 1.35rem;
+}
+
+.searchBox label,
+.filterBox label {
+  display: block;
+  font-family: var(--font-titulos);
+  color: var(--color-acento-secundario);
+  font-size: 1.08rem;
+  margin-bottom: 0.55rem;
+}
+
+.searchBox input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--color-acento-primario);
+  background-color: var(--color-fondo-principal);
+  color: var(--color-texto-principal);
+  font-family: var(--font-texto);
+  font-size: 1.05rem;
+  outline: none;
+}
+
+.searchBox input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.searchBox input:focus {
+  border-color: var(--color-acento-secundario);
+  box-shadow: 0 0 10px var(--color-acento-secundario);
+}
+
+.filtersRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.filterBox select {
+  width: 100%;
+  padding: 0.8rem 0.7rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--color-acento-secundario);
+  background-color: var(--color-fondo-principal);
+  color: var(--color-texto-principal);
+  font-family: var(--font-texto);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.filterBox select:focus {
+  border-color: var(--color-acento-primario);
+  box-shadow: 0 0 10px var(--color-acento-primario);
+}
+
+/* Mensaje sin resultados */
+
+.noResults {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-acento-primario);
+  border-radius: 1rem;
+  color: var(--color-acento-primario);
+  font-family: var(--font-titulos);
+  text-align: center;
+  background-color: #222;
+  box-shadow: 0 0 1.5rem rgba(210, 105, 30, 0.15);
+}
+
+/* Secciones */
 
 .menuSection {
   max-width: 1200px;
@@ -68,6 +241,8 @@
   border-radius: 50%;
   box-shadow: 0 0 8px var(--color-acento-secundario);
 }
+
+/* Cards */
 
 .grid {
   display: grid;
@@ -116,7 +291,7 @@
 }
 
 .cardContent {
-  padding: 1.8rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -132,7 +307,7 @@
 .cardTop h3 {
   font-family: var(--font-titulos);
   color: var(--color-acento-primario);
-  font-size: 1.8rem;
+  font-size: 1.55rem;
   margin: 0;
 }
 
@@ -142,19 +317,19 @@
   border: 1px solid var(--color-acento-secundario);
   border-radius: 0.4rem;
   padding: 0.2rem 0.7rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   white-space: nowrap;
 }
 
 .meta {
   font-family: var(--font-titulos);
   color: var(--color-acento-secundario);
-  margin: 1rem 0;
-  font-size: 1.3rem;
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
 }
 
 .description {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--color-texto-principal);
   line-height: 1.5;
   margin-bottom: 1.5rem;
@@ -169,35 +344,61 @@
   border-top: 1px solid var(--color-fondo-principal-60);
   font-family: var(--font-titulos);
   color: var(--color-acento-secundario);
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: auto;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .topPanel {
+    grid-template-columns: 1fr;
+    max-width: 850px;
+  }
+
+  .controlsPanel {
+    align-self: stretch;
+  }
 }
 
 @media (max-width: 900px) {
   .menuPage {
-    padding: 6rem 1.5rem 3rem;
+    padding: 4rem 1.5rem 3rem;
   }
 
-  .hero {
-    padding: 2rem;
+  .terminalTitle {
+    font-size: 2.7rem;
   }
 
-  .hero h1 {
-    font-size: 3rem;
+  .terminalText,
+  .terminalTyping {
+    font-size: 1rem;
   }
 
-  .hero p {
-    font-size: 1.4rem;
+  .filtersRow {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 400px) {
   .menuPage {
-    padding: 5rem 1rem 2rem;
+    padding: 3rem 1rem 2rem;
   }
 
-  .hero h1 {
-    font-size: 2.4rem;
+  .terminalHeader {
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .terminalTitle {
+    font-size: 2.1rem;
+  }
+
+  .terminalTyping {
+    white-space: normal;
+    border-right: none;
+    animation: none;
   }
 
   .grid {
