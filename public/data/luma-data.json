@@ -125,15 +125,4 @@
         
     }
   ],
-  "techStack": [
-    "react", 
-    "css",
-    "javascript",
-    "nodeJS",
-    "git",
-    "vite",
-    "mongodb"
-  ],
-  "socialMedia": {"GitHub": "https://github.com/Luma2001","LinkedIn": "https://www.linkedin.com/in/luma2001/", "Instagram": "https://instagram.com/" }
-  
 }
