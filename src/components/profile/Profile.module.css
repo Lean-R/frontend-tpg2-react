@@ -1,11 +1,35 @@
+.profile_body {
+  position: relative; /* Necesario para que la capa virtual se posicione bien */
+  min-height: 100vh;
+  background-color: transparent; /* El color oscuro base */
+  overflow-x: hidden;
+}
+
+.profile_body::before {
+  content: "";
+  position: fixed; /* Se queda quieto mientras se hace scroll */
+  top: -10%;
+  right: -10%;
+  /* transform: translate(-50%, -50%); Centrado perfecto */
+  width: 60vmax; /* Tamaño grande relativo a la pantalla */
+  height: 60vmax;
+
+  /* Referencia al archivo logo */
+  background-image: url("../img/logo.png");
+  background-size: contain;
+  opacity: 0.05;
+  filter: grayscale(100%);
+  z-index: -1;
+  pointer-events: none; /* Para que no interfiera con los clics */
+}
 
 
 /* 2. Contenedor de la Tarjeta */
 .id_card {
   max-width: 800px;
-  margin: 15rem auto;
+  margin: 2rem auto;
   border: 2px solid var(--color-acento-primario);
-  background: #222;
+  background: transparent;
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0 0 2rem rgba(210, 105, 30, 0.2);

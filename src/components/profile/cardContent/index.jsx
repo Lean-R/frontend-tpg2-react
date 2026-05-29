@@ -1,6 +1,6 @@
 import styles from '@components/profile/cardContent/CardContent.module.css'
 
-const CardContent = ({data}) => {
+const CardContent = ({data, onExecAction, preparadasCount, servidasCount}) => {
     if(!data) return null;
 
     const {name, profile_img, role, ageInfo, origin, recipe, workingWay, skills, btnPreparar, btnServir} = data;
@@ -21,19 +21,19 @@ const CardContent = ({data}) => {
                         <p className={styles.role_title}>Sucursal de Origen: {origin}</p>
 
                         <div className={styles.roast_controls}>
-                            <button id="btn-preparar" className={styles.btn_roast}>
+                            <button id="btn-preparar" className={styles.btn_roast} onClick={() => onExecAction('preparar')}>
                                 {btnPreparar}
                             </button>
 
                             <div className={styles.coffee_stats_mini}>
                                 <div className={styles.stat_item}>
                                     <label>PREPARADOS:</label>
-                                    <span id="count-preparadas">0</span>
+                                    <span id="count-preparadas">{preparadasCount}</span>
                                     <p>tazas de café y sumando...</p>
                                 </div>
                                 <div className={styles.stat_item}>
                                     <label>SERVIDOS:</label>
-                                    <span id="count-servidas">0</span>
+                                    <span id="count-servidas">{servidasCount}</span>
                                     <p>bugs resueltos y servidos...</p>
                                 </div>
                             </div>
@@ -51,7 +51,17 @@ const CardContent = ({data}) => {
                             <label>INGREDIENTES TÉCNICOS (SKILLS):</label>
                             <ul className={styles.skill_tags}>
                                 {skills && skills.map((skill, index) => (
-                                    <li key={index}>{skill}</li>
+                                    <div key={index} className={styles.skill_item}>
+                                        <div className={styles.skill_info}>
+                                            <span>{`${skill.name}  ${skill.level}%`}</span>
+                                        </div>
+                                        <div className={styles.progress_bar_bg}>
+                                            <div 
+                                            className={styles.progress_bar_fill} 
+                                            style={{ '--progress-width': `${skill.level}%` }}
+                                            />
+                                        </div>
+                                    </div>
                                 ))}
                             </ul>
                         </div>
@@ -61,7 +71,7 @@ const CardContent = ({data}) => {
                             <p>
                                 {workingWay}
                             </p>
-                            <button id="btn-servir" className={`${styles.btn_roast} ${styles.btn_secondary}`}>
+                            <button id="btn-servir" className={`${styles.btn_roast} ${styles.btn_secondary}`} onClick={() => onExecAction('servir')}>
                                 {btnServir}
                             </button>
                         </div>
