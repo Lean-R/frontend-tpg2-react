@@ -1,7 +1,7 @@
 # ☕ The Coffee-Code Engine
 
-> **Deploy en Vercel:** _[Link pendiente de publicación]_  
-> **Repositorio:** [github.com/Lean-R/frontend-tpg2-react](https://github.com/Lean-R/frontend-tpg2-react)
+> **Deploy en Vercel:** [Coffee-code Engine Vercel App](https://coffee-code-engine.vercel.app)  
+> **Repositorio:** [Github Repository](https://github.com/Lean-R/frontend-tpg2-react)
 
 ---
 
@@ -138,7 +138,7 @@ frontend-tpg2-react/
 
 ## 🔗 Enlace al Proyecto Desplegado
 
-> _🚧 Deploy en Vercel pendiente. Link a publicar próximamente._
+> _🚧 Enlace a aplicación desplegada en Vercel: [Coffee-code Engine Vercel App](https://coffee-code-engine.vercel.app)_
 
 ---
 
