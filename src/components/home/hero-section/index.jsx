@@ -121,7 +121,7 @@ export default function HeroSection() {
               <IconCoffee size={18} stroke={2} />
               Hacé tu pedido
             </a>
-            <a href="#source" className={styles.btnGhost}>
+            <a href="#team" className={styles.btnGhost}>
               Conocé al equipo
               <IconChevronRight size={14} stroke={1.5} />
             </a>
