@@ -85,48 +85,40 @@
       "image": "img/media-dani/nirvana-nevermind.png" 
     }
   ],
-  "projects":[
-    {    
-        
-        "title": "Landing Page para Plataforma de E-commerce",
-        "description":"Simulación No-country: Optimización de Landing Page para plataforma de e-commerce, objetivo mejorar la experiencia del usuario y aumentar las conversiones. Diseño atractivo y funcional, con enfoque en la usabilidad y la navegación intuitiva.",
-        "web": "https://s02-26-equipo18-webbapp-1.onrender.com/",
-        "git":"https://github.com/No-Country-simulation/S02-26-EQUIPO18-WebbApp.git",
-        "img":"/img/media-luma/totalInc.webp",
-        "tags": ["React", "CSS", "JavaScript", "Responsive Design"]  
-        
-    },
-    {    
-        
-        "title": "Estudio Martín Jordanes",
-        "description":"Sitio Web Real en producción. Diseño en React y css modular. Responsive con Home y 4 secciones.",
-        "web": "https://estudio-jordanes.vercel.app/",
-        "git":"",
-        "img":"/img/media-luma/estudioJordanes.webp",
-        "tags": ["React", "CSS", "JavaScript", "Responsive Design"]  
-        
-    },
-    {    
-        
-        "title": "Juego de Adivinanza",
-        "description":"Juega junto con la Vidente Amira: Intenta adivinar en qué número está pensando. A DIVERTIRSE!!!!!! ",
-        "web": "https://luma2001.github.io/juegoadivinanza/",
-        "git":"https://github.com/Luma2001/juegoadivinanza.git",
-        "img":"/img/media-luma/adivinanza.webp",
-        "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]  
-        
-    },
-    {    
-    
-        "title": "Tablero de Notas",
-        "description":"Pizarra para notas rápida. Interfaz agradable y sencilla. Posee ToDo List, Check List e Historial.",
-        "web": "https://pizarranotas.netlify.app/",
-        "git":"https://github.com/Luma2001/tableronotas.git",
-        "img":"/img/media-luma/pizzara.webp",
-        "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]
-        
-    }
-  ]
+  "projects": [
+  {
+    "title": "Alquiler de autos eléctricos en la ciudad",
+    "description": "Sitio personal deployado con GitHub Pages. Presentación como desarrollador frontend con secciones de proyectos y contacto.",
+    "web": "https://danielclementin.github.io/",
+    "git": "https://github.com/danielclementin/danielclementin.github.io",
+    "img": "/img/media-dani/proyecto-portfolio.jpg",
+    "tags": ["HTML", "CSS", "JavaScript", "GitHub Pages"]
+  },
+  {
+    "title": "Pagina de prueba para hacer submit",
+    "description": "Repositorio de páginas web creadas centradas en el desarrollo frontend. Colección de ejercicios y proyectos con HTML y CSS.",
+    "web": "https://danielclementin.github.io/decfrontend.github.io/",
+    "git": "https://github.com/danielclementin/decfrontend.github.io",
+    "img": "/img/media-dani/proyecto-frontend.jpg",
+    "tags": ["HTML", "CSS", "Responsive Design"]
+  },
+  {
+    "title": "Trabajo Final del Bootcamp Codo a Codo",
+    "description": "Sitio co desarrollado en equipo con HTML, CSS y JavaScript vanilla.",
+    "web": "https://danielclementin.github.io/decfrontend1/",
+    "git": "https://github.com/danielclementin/decfrontend1",
+    "img": "/img/media-dani/proyecto-tp1.jpg",
+    "tags": ["HTML", "CSS", "JavaScript", "Trabajo en Equipo"]
+  },
+  {
+    "title": "OBC Bootcamp",
+    "description": "Ejercicios y entregas del BootCamp. Resolución de problemas de lógica y programación orientada a objetos en Java.",
+    "web": "",
+    "git": "https://github.com/danielclementin/OBCbootcamp",
+    "img": "/img/media-dani/proyecto-bootcamp.jpg",
+    "tags": ["Java", "POO", "Algoritmos", "Backend"]
+  }
+]
 }
 
 
