@@ -45,7 +45,7 @@ const Nav = ({ onToggleSidebar, sidebarOpen }) => {
 
       <ul className={styles.nav_links} id="nav-menu">
         <li><HashLink to="/#hero">RUNTIME</HashLink></li>
-        <li><HashLink to="/#team">EQUIPO</HashLink></li>
+        <li><NavLink to="/coffee-menu">MENU</NavLink></li>
         <li><NavLink to="/tickets">PEDIDOS</NavLink></li>
         <li><NavLink to="/bitacora">BITACORA</NavLink></li>
         <li><HashLink to="/#contact">CONTACTO</HashLink></li>

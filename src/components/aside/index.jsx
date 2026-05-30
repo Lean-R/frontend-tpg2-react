@@ -8,6 +8,7 @@ import {
   IconTicket,
   IconRoute,
 } from "@tabler/icons-react";
+import { IconCoffee } from "@tabler/icons-react";
 
 const Aside = ({ onClose }) => {
   const handleNavClick = () => {
@@ -41,6 +42,19 @@ const Aside = ({ onClose }) => {
           <IconHome className={styles.nav_icon} size={18} />
           Localhost Coffe
         </NavLink>
+
+        <NavLink
+          to="/coffee-menu"
+          end
+          className={({ isActive }) =>
+            isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
+          }
+          onClick={handleNavClick}
+        >
+          <IconCoffee className={styles.nav_icon} size={18} />
+          Especialidades
+        </NavLink>
+
 
         <div className={styles.nav_section}>
           <span className={styles.nav_section_title}>BaristaDevs</span>
