@@ -87,7 +87,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       {/*  Columna izquierda — Logo + Texto  */}
       <div className={styles.heroContent}>
         <div className={styles.heroLogoContainer}>

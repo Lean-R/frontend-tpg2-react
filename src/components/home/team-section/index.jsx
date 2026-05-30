@@ -60,7 +60,7 @@ export default function TeamSection() {
   };
 
   return (
-    <section id="source" className={styles.teamSection}>
+    <section id="team" className={styles.teamSection}>
       <h2 className={styles.sectionTitle}>Nuestro Equipo: Barista-Devs</h2>
       <p className={styles.sectionSubtitle}>
         Expertos en mezclar cafeína y código

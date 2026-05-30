@@ -44,11 +44,11 @@ const Nav = ({ onToggleSidebar, sidebarOpen }) => {
       </div>
 
       <ul className={styles.nav_links} id="nav-menu">
-        <li><HashLink to="#runtime">RUNTIME</HashLink></li>
-        <li><HashLink to="#brew">BREW_DOCS</HashLink></li>
-        <li><HashLink to="#source">SOURCE</HashLink></li>
-        <li><HashLink to="#terminal">TERMINAL</HashLink></li>
+        <li><HashLink to="/#hero">RUNTIME</HashLink></li>
+        <li><HashLink to="/#team">EQUIPO</HashLink></li>
+        <li><NavLink to="/tickets">PEDIDOS</NavLink></li>
         <li><NavLink to="/bitacora">BITACORA</NavLink></li>
+        <li><HashLink to="/#contact">CONTACTO</HashLink></li>
       </ul>
 
       <div className={styles.nav_system_icons}>
