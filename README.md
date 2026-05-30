@@ -181,5 +181,3 @@ El proyecto original (TP1) fue desarrollado como un sitio estático con HTML, CS
 - Las imágenes de perfil y media del proyecto fueron seleccionadas por el equipo. Los avatares e íconos temáticos fueron generados con herramientas de IA generativa utilizando prompts orientados a la estética "café + tecnología" del proyecto.
 
 ---
-
-_README generado durante el desarrollo del TP2 — IFTS N°29 · 2026_
