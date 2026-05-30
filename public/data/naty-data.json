@@ -88,45 +88,47 @@
   "projects":[
     {    
         
-        "title": "Landing Page para Plataforma de E-commerce",
-        "description":"Simulación No-country: Optimización de Landing Page para plataforma de e-commerce, objetivo mejorar la experiencia del usuario y aumentar las conversiones. Diseño atractivo y funcional, con enfoque en la usabilidad y la navegación intuitiva.",
-        "web": "https://s02-26-equipo18-webbapp-1.onrender.com/",
-        "git":"https://github.com/No-Country-simulation/S02-26-EQUIPO18-WebbApp.git",
-        "img":"/img/media-luma/totalInc.webp",
-        "tags": ["React", "CSS", "JavaScript", "Responsive Design"]  
+        "title": "Los Perritos del Palomar Refugio",
+        "description": "Sitio web para visualizar perritos en adopción del refugio Los Perritos del Palomar. Permite conocer la ficha de cada perrito, buscar por nombre, filtrar por sexo, tamaño, edad y características, y comunicarse por WhatsApp con Claudia para coordinar una visita o recibir más información.",
+        "web": "https://perritos-palomar-refugio.vercel.app/",
+        "git": "https://github.com/NatyBu26/perritos-palomar-refugio",
+        "img": "/img/media-naty/refugio-palomar.png",
+        "tags": ["React", "CSS", "JavaScript", "JSON", "Responsive Design"]
         
     },
     {    
         
-        "title": "Estudio Martín Jordanes",
-        "description":"Sitio Web Real en producción. Diseño en React y css modular. Responsive con Home y 4 secciones.",
-        "web": "https://estudio-jordanes.vercel.app/",
-        "git":"",
-        "img":"/img/media-luma/estudioJordanes.webp",
-        "tags": ["React", "CSS", "JavaScript", "Responsive Design"]  
-        
-    },
-    {    
-        
-        "title": "Juego de Adivinanza",
-        "description":"Juega junto con la Vidente Amira: Intenta adivinar en qué número está pensando. A DIVERTIRSE!!!!!! ",
-        "web": "https://luma2001.github.io/juegoadivinanza/",
-        "git":"https://github.com/Luma2001/juegoadivinanza.git",
-        "img":"/img/media-luma/adivinanza.webp",
-        "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]  
-        
-    },
-    {    
-    
-        "title": "Tablero de Notas",
-        "description":"Pizarra para notas rápida. Interfaz agradable y sencilla. Posee ToDo List, Check List e Historial.",
-        "web": "https://pizarranotas.netlify.app/",
-        "git":"https://github.com/Luma2001/tableronotas.git",
-        "img":"/img/media-luma/pizzara.webp",
+        "title": "Compañeros de computadora",
+        "description": "Aplicación web para generar parejas aleatorias de estudiantes. Fue pensada como una herramienta práctica para organizar el aula de programación de forma rápida, clara y responsive.",
+        "web": "https://compas-de-computadora.vercel.app/",
+        "git": "https://github.com/NatyBu26/Compas-de-computadora",
+        "img": "/img/media-naty/compa-compu.png",
         "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]
         
+    },
+    {    
+        
+        "title": "Generador de grupos",
+        "description": "Aplicación web para formar grupos aleatorios de estudiantes indicando la cantidad de integrantes por equipo. Fue pensada como una herramienta práctica para organizar actividades, juegos y trabajos colaborativos en el aula.",
+        "web": "https://generador-de-grupos.vercel.app/",
+        "git": "https://github.com/NatyBu26/generador-de-grupos",
+        "img": "/img/media-naty/grupos.png",
+        "tags": ["HTML", "CSS", "JavaScript", "Educación"]
+        
     }
-  ]
+  ],
+  "techStack": [
+    "html",
+    "css",
+    "javascript",
+    "react",
+    "python",
+    "json",
+    "git"
+],
+"socialMedia": {
+  "GitHub": "https://github.com/NatyBu26","Instagram": "https://www.instagram.com/naty.burnazzi"
+}
 }
 
 
