@@ -155,7 +155,69 @@ El proyecto original (TP1) fue desarrollado como un sitio estático con HTML, CS
 
 ### Mejoras incorporadas
 
-> _📸 Capturas y descripción de mejoras a completar durante el desarrollo._
+#### Sidebar
+Incorporación de sidebar fijo en el lateral izquierdo del sitio. Permite una navegación rápida y fluida entre cada página del sitio. Cuenta con un diseño moderno y atractivo, optimizado para funcionar de manera responsiva en pantallas pequeñas.
+
+![Vista de la sidebar](public/img/readme/readme-1.png)
+
+#### Lightbox
+Incorporación de lightbox para mostrar imágenes en tamaño completo al hacer clic en ellas. Permite una visualización atractiva y sin distracciones de los contenidos del sitio.
+
+![Vista del lightbox](public/img/readme/readme-2.png)
+
+![Vista del lightbox](public/img/readme/readme-3.png)
+
+#### Consumo de APIs externas
+
+Integración de APIs externas.
+Consumo asíncrono de los datos de la api de Github y Random User Generator.
+La implementación maneja correctamente estados de carga y error e incluye un sistema de paginación al consumir los issues de Github. 
+
+La API de Github se utiliza para buscar issues de repositorios públicos conocidos, simulando comandas de la cafetería en las que se encuentra trabajando el equipo de baristas.
+- Url utilizada para api de Github: `https://api.github.com/search/issues?q=${query}&page=${pageNum}&per_page=${PER_PAGE}`
+
+Adicionalmente, se integra la API de Random User Generator para obtener datos de usuarios aleatorios y simular reviews de clientes
+- Url utilizada para api de Random User Generator: `https://randomuser.me/api/?results=12&seed=devcafe2026&inc=name,location,picture`
+
+![Vista del lightbox](public/img/readme/readme-4A.png)
+
+![Vista del lightbox](public/img/readme/readme-4B.png)
+
+#### Explorador de datos locales JSON
+
+Creación de archivo JSON con datos que simulan la carta de café de la cafetería. Los mismos se consumen localmente en la aplicación, permitiendo una visualización y exploración de las distintas variedades de café disponibles.
+
+La página que consume los datos, incorpora un sistema de filtrado en tiempo real e incluye un buscador de texto que actualiza la vista en forma dinámica.
+
+![Vista del explorador de datos](public/img/readme/readme-5.png)
+
+#### Mejoras en secciones individuales
+
+Se realizaron diferentes mejoras en las secciones individuales de cada integrante del equipo. Se eliminó la repetición del código, creando un page reutilizable que recibe la información correspondiente a cada miembro del equipo, aprovechando las ventajas de utilizar React.
+
+Cada page incorpora:
+ - barras de progreso de habilidades, con animaciones para mostrar el progreso de manera visual y atractiva.
+ - carrusel de proyectos tipo galería interactiva con controles manuales
+ - Tech stack con iconografía y efectos visuales
+ - botones de social media con efectos hover avanzados (cambio de color, transform y shadows)
+
+![Vista de la página de un integrante](public/img/readme/readme-7.png)
+
+![Vista de la página de un integrante](public/img/readme/readme-7B.png)
+
+#### Árbol de renderizado
+
+Página completa donde se renderiza una representación gráfica, esquemática del árbol de renderizado de la aplicación. Detalla la estructura jerárquica, identificando el componente raíz, los componentes de nivel susperior y los componentes hoja mediante una representación visual, haciendo una analogía con la ruta del café, donde se representa cómo fluyen los datos de los componentes a través de la aplicación.
+
+![Vista de la página de un integrante](public/img/readme/readme-8.png)
+
+#### Actualización de bitacora del proyecto
+
+Actualización de los registros de la bitácora del proyecto para ilustrar el progreso de esta segunda etapa. Incluye descripción detallada de los roles asignados y el flujo de trabajo del equipo.
+Incopora animaciones suaves y lazy load para evitar que se cargue toda la información al inicio, lo que mejora la experiencia del usuario, la performance y reduce el tiempo de carga inicial.
+
+![Vista de la bitácora del proyecto](public/img/readme/readme-9.png)
+
 
 ---
 
