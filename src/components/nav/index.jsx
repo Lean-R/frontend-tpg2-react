@@ -7,7 +7,7 @@ import { HashLink } from 'react-router-hash-link'
 import { useEffect, useState } from 'react'
 
 
-const Nav = () => {
+const Nav = ({ onToggleSidebar, sidebarOpen }) => {
 
   const [currentTime, setCurrentTime] = useState('');
 
@@ -28,12 +28,18 @@ const Nav = () => {
   return (
     <nav className={styles.os_navbar}>
       <div className={styles.nav_left}>
-        <button className={styles.nav_hamburger} id="hamburger-menu" aria-label="Toggle menu">
+        {/* Botón para abrir sidebar - Solo visible en mobile */}
+        <button
+          className={`${styles.nav_hamburger} ${sidebarOpen ? styles.active : ''}`}
+          id="hamburger-menu"
+          aria-label="Toggle menu"
+          onClick={onToggleSidebar}
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
-        
+
         <span className={styles.nav_brand}>Coffee Code Engine</span>
       </div>
 

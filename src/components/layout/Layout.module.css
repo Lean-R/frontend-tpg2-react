@@ -11,6 +11,7 @@
     height: 100vh;
     overflow-y: auto;
     z-index: 1000;
+    transition: transform 0.3s ease;
 }
 
 .main_container {
@@ -19,8 +20,38 @@
     flex-direction: column;
     min-height: 100vh;
     margin-left: 250px;
+    transition: margin-left 0.3s ease;
 }
 
 .content {
     flex: 1;
+}
+
+/* Overlay para mobile cuando el sidebar está abierto */
+.overlay {
+    display: none;
+}
+
+/*  Responsive: md y menores  */
+@media (max-width: 768px) {
+    .aside_container {
+        transform: translateX(-100%);
+        width: 100%;
+    }
+
+    .aside_container.aside_open {
+        transform: translateX(0);
+    }
+
+    .main_container {
+        margin-left: 0;
+    }
+
+    .overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
 }

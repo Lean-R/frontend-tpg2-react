@@ -19,6 +19,7 @@
     padding-bottom: 1.5em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     width: 100%;
+    position: relative;
 }
 
 .aside_logo {
@@ -33,7 +34,7 @@
     text-align: center;
 }
 
-/* ---- Navegacion ---- */
+/*  Navegacion  */
 
 .aside_nav {
     display: flex;
@@ -79,7 +80,7 @@
     opacity: 1;
 }
 
-/* ---- Seccion Bartenders ---- */
+/*  Seccion Bartenders  */
 
 .nav_section {
     display: flex;
@@ -101,4 +102,32 @@
 .nav_section .nav_link {
     font-size: 1.5em;
     padding: 0.4em 0.8em;
+}
+
+/*  Boton de cierre (solo mobile)  */
+.close_btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .close_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+        background: none;
+        border: none;
+        color: var(--color-acento-secundario);
+        cursor: pointer;
+        padding: 6px;
+        z-index: 10;
+        border-radius: 4px;
+        transition: background 0.2s ease;
+    }
+
+    .close_btn:hover {
+        background: rgba(255, 255, 255, 0.08);
+    }
 }
