@@ -130,9 +130,7 @@ frontend-tpg2-react/
 - **Renderizado condicional** — Las fichas muestran un mensaje de carga mientras el JSON no está disponible.
 - **Mapeo dinámico de listas** — Skills, films y discos se renderizan mediante `.map()` sobre los arrays del JSON.
 
-### Capturas de pantalla
 
-> _📸 Capturas pendientes de agregar una vez deployado el proyecto en Vercel._
 
 ---
 
