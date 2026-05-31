@@ -4,6 +4,7 @@
     padding: 5rem 5%;
     background: var(--color-fondo-principal-80, #262626);
     text-align: center;
+    max-width: 100%;
 }
 
 .sectionTitle {
@@ -26,7 +27,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -101,8 +102,8 @@
 }
 
 .memberName:hover {
-    text-shadow: 0 0 10px var(--color-acento-primario, #d2691e);
-    color: var(--color-acento-primario, #d2691e);
+    text-shadow: 0 0 10px var(--color-acento-primario, var(--color-acento-primario));
+    color: var(--color-acento-primario, var(--color-acento-primario));
 }
 
 .memberRole {

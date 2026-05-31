@@ -4,6 +4,7 @@
     padding: 5rem 5%;
     background: var(--color-fondo-principal, #1a1a1a);
     text-align: center;
+    max-width: 100%;
 }
 
 .sectionTitle {

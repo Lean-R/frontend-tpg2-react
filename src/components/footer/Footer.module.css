@@ -9,6 +9,7 @@
   font-family: "Space Mono", monospace;
   color: var(--color-texto-secundario);
   margin-top: auto;
+  max-width: 100%;
 }
 
 .footer_left {

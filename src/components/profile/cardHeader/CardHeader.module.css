@@ -9,12 +9,13 @@
   font-family: var(--font-titulos);
   font-weight: bold;
   font-size: 2rem;
+  gap: 2rem;
 }
 
 .header_left {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .back_link {
@@ -41,4 +42,9 @@
   background-color: var(--color-acento-secundario);
   border-radius: 50%;
   box-shadow: 0 0 8px var(--color-acento-secundario);
+}
+
+/* 1. MÓVILES PEQUEÑOS (Hasta 400px) */
+@media (max-width: 700px) {
+
 }

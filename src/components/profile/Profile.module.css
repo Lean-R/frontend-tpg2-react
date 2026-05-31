@@ -1,7 +1,7 @@
 .profile_body {
   position: relative; /* Necesario para que la capa virtual se posicione bien */
   min-height: 100vh;
-  background-color: transparent; /* El color oscuro base */
+  background-color: transparent; 
   overflow-x: hidden;
 }
 
@@ -26,11 +26,20 @@
 
 /* 2. Contenedor de la Tarjeta */
 .id_card {
-  max-width: 800px;
+  max-width: 80rem;
   margin: 2rem auto;
   border: 2px solid var(--color-acento-primario);
   background: transparent;
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0 0 2rem rgba(210, 105, 30, 0.2);
+}
+
+
+/* 1. MÓVILES PEQUEÑOS (Hasta 400px) */
+@media (max-width: 700px) {
+  .id_card {
+    margin: 1rem auto;
+    max-width: 90%;
+  }
 }

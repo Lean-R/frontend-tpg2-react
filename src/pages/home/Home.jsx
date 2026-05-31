@@ -6,13 +6,13 @@ import ContactForm from "../../components/ContactForm";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <HeroSection />
       <TeamSection />
       <WorkspaceGallery />
       <MarqueeClientes />
       <ContactForm />
-    </div>
+    </>
   );
 };
 

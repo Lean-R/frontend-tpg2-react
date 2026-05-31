@@ -27,6 +27,7 @@ const CardContent = ({
         <>
             <div className={styles.card_content}>
                 <div className={styles.photo_section}>
+                    
                     <div className={styles.photo_frame}>
                         <img
                             src={profile_img}
@@ -35,42 +36,44 @@ const CardContent = ({
                         />
                     </div>
 
-                    <h1>{name}</h1>
-                    <p className={styles.role_title}>{role}</p>
-                    <p className={styles.role_title}>
-                        Edad: {ageInfo}
-                    </p>
-                    <p className={styles.role_title}>
-                        Sucursal de Origen: {origin}
-                    </p>
+                    <div className={styles.basic_info}>  
+                        <h1>{name}</h1>
+                        <p className={styles.role_title}>{role}</p>
+                        <p className={styles.role_title}>
+                            Edad: {ageInfo}
+                        </p>
+                        <p className={styles.role_title}>
+                            Sucursal de Origen: {origin}
+                        </p>
 
-                    <div className={styles.roast_controls}>
-                        <button
-                            id="btn-preparar"
-                            className={styles.btn_roast}
-                            onClick={() => onExecAction?.('preparar')}
-                        >
-                            {btnPreparar}
-                        </button>
+                        <div className={styles.roast_controls}>
+                            <button
+                                id="btn-preparar"
+                                className={styles.btn_roast}
+                                onClick={() => onExecAction?.('preparar')}
+                            >
+                                {btnPreparar}
+                            </button>
 
-                        <div className={styles.coffee_stats_mini}>
-                            <div className={styles.stat_item}>
-                                <label>PREPARADOS:</label>
-                                <span id="count-preparadas">
-                                    {preparadasCount ?? 0}
-                                </span>
-                                <p>tazas de café y sumando...</p>
-                            </div>
+                            <div className={styles.coffee_stats_mini}>
+                                <div className={styles.stat_item}>
+                                    <label>PREPARADOS:</label>
+                                    <span id="count-preparadas">
+                                        {preparadasCount ?? 0}
+                                    </span>
+                                    <p>tazas de café y sumando...</p>
+                                </div>
 
-                            <div className={styles.stat_item}>
-                                <label>SERVIDOS:</label>
-                                <span id="count-servidas">
-                                    {servidasCount ?? 0}
-                                </span>
-                                <p>bugs resueltos y servidos...</p>
+                                <div className={styles.stat_item}>
+                                    <label>SERVIDOS:</label>
+                                    <span id="count-servidas">
+                                        {servidasCount ?? 0}
+                                    </span>
+                                    <p>bugs resueltos y servidos...</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div>      
                 </div>
 
                 <div className={styles.info_section}>
