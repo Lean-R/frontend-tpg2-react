@@ -1,10 +1,9 @@
-/*  Contenedor principal  */
+/* Contenedor principal */
 .teamSection {
     font-size: 16px;
     padding: 5rem 5%;
     background: var(--color-fondo-principal-80, #262626);
     text-align: center;
-    max-width: 100%;
 }
 
 .sectionTitle {
@@ -13,6 +12,7 @@
     color: var(--color-texto-principal, #f5f5dc);
     margin-bottom: 0.5rem;
     font-weight: 700;
+    line-height: 1.3;
 }
 
 .sectionSubtitle {
@@ -22,16 +22,16 @@
     font-weight: 300;
 }
 
-/*  Grilla  */
+/* Grilla */
 .teamGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
-/* Tarjeta del equipo - Vertical */
+/* Tarjeta del equipo */
 .idCard {
     max-width: 100%;
     margin: 0;
@@ -102,8 +102,8 @@
 }
 
 .memberName:hover {
-    text-shadow: 0 0 10px var(--color-acento-primario, var(--color-acento-primario));
-    color: var(--color-acento-primario, var(--color-acento-primario));
+    text-shadow: 0 0 10px var(--color-acento-primario, #d2691e);
+    color: var(--color-acento-primario, #d2691e);
 }
 
 .memberRole {
@@ -140,37 +140,100 @@
     transform: scale(0.98);
 }
 
-/*  Responsive: tablets (2 × 2)  */
+/* Responsive: tablets */
 @media (max-width: 1024px) {
     .teamGrid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
+
+    .idCard {
+        aspect-ratio: 1 / 1.7;
+    }
 }
 
-/*  Responsive: mobile (1 columna)  */
+/* Responsive: mobile */
 @media (max-width: 600px) {
     .teamSection {
-        padding: 3rem 3%;
+        padding: 3rem 1.5rem;
     }
 
     .sectionTitle {
-        font-size: 1.8em;
-        margin-bottom: 0.3rem;
+        font-size: 1.7em;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
     }
 
     .sectionSubtitle {
+        font-size: 1em;
         margin-bottom: 2rem;
+        line-height: 1.4;
     }
 
     .teamGrid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 2rem;
+        max-width: 340px;
+        margin: 0 auto;
     }
 
     .idCard {
-        max-width: 100%;
+        width: 100%;
+        max-width: 320px;
+        height: 430px;
         margin: 0 auto;
-        aspect-ratio: 1 / 2.5;
+        aspect-ratio: auto;
+        border: 1px solid rgba(210, 105, 30, 0.45);
+        border-radius: 1.2rem;
+        box-shadow: 0 0 18px rgba(210, 105, 30, 0.18);
+        background-color: var(--color-fondo-principal, #1a1a1a);
+    }
+
+    .cardImage {
+        filter: grayscale(0%);
+        transform: none;
+    }
+
+    .idCard:hover .cardImage {
+        filter: grayscale(0%);
+        transform: none;
+    }
+
+    .cardOverlay {
+        padding: 1.4rem;
+        min-height: 45%;
+        background: linear-gradient(
+            to bottom,
+            rgba(26, 26, 26, 0) 0%,
+            rgba(26, 26, 26, 0.85) 45%,
+            rgba(26, 26, 26, 0.98) 100%
+        );
+    }
+
+    .memberName {
+        font-size: 1.3em;
+        color: var(--color-texto-principal, #f5f5dc);
+    }
+
+    .memberRole {
+        font-size: 0.9em;
+    }
+
+    .btnProfile {
+        border: 1px solid var(--color-acento-secundario, #00ff41);
+        color: var(--color-acento-secundario, #00ff41);
+        padding: 0.7em 1.2em;
+        border-radius: 0.4rem;
+        margin-top: 0.4rem;
+        background-color: rgba(0, 255, 65, 0.06);
+    }
+
+    .btnProfile:hover {
+        background-color: var(--color-acento-secundario, #00ff41);
+        color: var(--color-fondo-principal, #1a1a1a);
     }
 }
+
+
+
+

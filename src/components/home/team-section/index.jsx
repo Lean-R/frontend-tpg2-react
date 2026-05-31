@@ -35,7 +35,6 @@ const TEAM_MEMBERS = [
 export default function TeamSection() {
   const navigate = useNavigate();
 
-  /*  Click en nombre del miembro: efecto glow temporal  */
   const handleMemberClick = (e) => {
     const el = e.currentTarget;
     el.style.color = "var(--color-acento-secundario)";
@@ -47,33 +46,27 @@ export default function TeamSection() {
     }, 1500);
   };
 
-  /*  Click en botón de perfil: feedback visual + navegación  */
-  const handleProfileClick = (e, url) => {
-    e.preventDefault();
-    const btn = e.currentTarget;
-
-    btn.style.transform = "scale(0.95)";
-
-    setTimeout(() => {
-      navigate(url);
-    }, 500);
+  const handleProfileClick = (url) => {
+    navigate(url);
   };
 
   return (
-    <section id="team" className={styles.teamSection}>
-      <h2 className={styles.sectionTitle}>Nuestro Equipo: Barista-Devs</h2>
+    <section id="source" className={styles.teamSection}>
+      <h2 className={styles.sectionTitle}>{"> Nuestro Equipo: Barista-Devs"}</h2>
+
       <p className={styles.sectionSubtitle}>
         Expertos en mezclar cafeína y código
       </p>
 
       <div className={styles.teamGrid}>
-        {TEAM_MEMBERS.map((member, idx) => (
-          <div className={styles.idCard} key={idx}>
+        {TEAM_MEMBERS.map((member) => (
+          <article className={styles.idCard} key={member.profileHref}>
             <img
               src={member.img}
               alt={member.alt}
               className={styles.cardImage}
             />
+
             <div className={styles.cardOverlay}>
               <h3
                 className={styles.memberName}
@@ -82,15 +75,18 @@ export default function TeamSection() {
               >
                 {member.name}
               </h3>
+
               <p className={styles.memberRole}>{member.role}</p>
+
               <button
+                type="button"
                 className={styles.btnProfile}
-                onClick={(e) => handleProfileClick(e, member.profileHref)}
+                onClick={() => handleProfileClick(member.profileHref)}
               >
                 [ Cargar Perfil ]
               </button>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
