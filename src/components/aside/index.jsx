@@ -40,7 +40,7 @@ const Aside = ({ onClose }) => {
           onClick={handleNavClick}
         >
           <IconHome className={styles.nav_icon} size={18} />
-          Localhost Coffe
+          Localhost Coffee
         </NavLink>
 
         <NavLink
